@@ -1,0 +1,33 @@
+.client {
+    margin: 120px 0;
+}
+
+.client__title {
+    color: #454545;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.client-list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 35px;
+    row-gap: 18px;
+}
+
+.client-list-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    border: #A9B5C9 solid 1px;
+    padding: 20px 30px;
+}
+
+.client-list-item__img img {
+    height: 65px;
+    object-fit: contain;
+    object-position: center;
+}

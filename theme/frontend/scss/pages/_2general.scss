@@ -1,0 +1,36 @@
+.general {
+    display: flex;
+    background-image: url(/theme/frontend/images/general_img_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 310px;
+}
+
+.general-list {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.general-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.general-list-item__number {
+    -webkit-text-stroke: 1px #FFF;
+    text-align: center;
+    color: #01B9EA;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.general-list-item__text {
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}

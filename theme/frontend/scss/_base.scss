@@ -12,3 +12,15 @@ body {
     margin: 0 auto;
     padding: 0 10px;
 }
+
+.slick-dotted.slick-slider {
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #01B9EA;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    border: #01B9EA solid 1px;
+}

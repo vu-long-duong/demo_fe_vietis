@@ -1,11 +1,12 @@
 header {
-    background-image: url(/theme/frontend/images/header_img_background.png);
-    height: 784px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+    background-image: url(/theme/frontend/images/header_img_background.png), url(/theme/frontend/images/header_img_background2.png);
+    height: 784px;
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, 100% 180px;
 }
+
 
 .header-top-pc-logo {
     display: flex;
@@ -20,8 +21,30 @@ header {
     gap: 30px;
 }
 
-.header-top-pc-logo-nav__link.header-top-pc-logo-nav__link--active{
+.header-top-pc-logo-nav__link.header-top-pc-logo-nav__link--active {
     font-weight: 700;
+}
+
+.header-top-pc-logo-nav__link--active {
+    position: relative;
+}
+
+.header-top-pc-logo-nav__link--active::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 100%;
+    background-color: #01B9EA;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.header-top-pc-logo-nav__link--active:hover::after,
+.header-top-pc-logo-nav__link:hover {
+    transform: scaleX(1);
 }
 
 .header-top-pc-logo-nav__link.header-top-pc-logo-nav__link--language {
@@ -91,6 +114,7 @@ header {
 }
 
 .header-bottom-achievement-item {
+    padding: 5px;
     border-radius: 13px;
     border: 1px solid #9FE2FF;
 }
@@ -108,8 +132,9 @@ header {
 }
 
 .header-bottom__pattern {
+    height: 96px;
     position: absolute;
-    bottom: -3px;
+    bottom: -5px;
     left: 0;
     right: 0;
 }
