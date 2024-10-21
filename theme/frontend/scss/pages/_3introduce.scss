@@ -1,6 +1,6 @@
 .introduce {
     position: relative;
-    margin-top: 110px;
+    margin-top: 100px;
 }
 
 .introduce-develop {
@@ -11,10 +11,6 @@
 .introduce-develop > * {
     flex-basis: 50%;
     flex-grow: 1;
-}
-
-.introduce-develop-top {
-    
 }
 
 .introduce-develop-top__title {
@@ -36,10 +32,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-}
-
-.introduce-develop__img {
-
 }
 
 .introduce-outsource {
@@ -142,12 +134,12 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 8px;
-    
     padding: 55px 60px;
     background-image: url(/theme/frontend/images/introduce_img_background_meeting.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 1100px;
 }
 
 .introduce-metting__title {
@@ -171,3 +163,50 @@
     line-height: 20px;
 }
 
+@media (max-width: 1024px) and (min-width: 756px) {
+
+    .introduce-metting {
+        width: auto;
+    }
+
+    .introduce-outsource {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .introduce-outsource-main {
+        margin: 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 756px) {
+
+    .introduce {
+        margin: 0;
+    }
+
+    .introduce-develop {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .introduce-outsource {
+        margin: 60px 0 100px;
+    }
+
+    .introduce-metting {
+        flex-wrap: wrap;
+        width: auto;
+        padding: 15px 20px;
+    }
+
+    .introduce-outsource {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .introduce-outsource-main {
+        margin: 20px 0 0;
+        padding: 20px 30px;
+    }
+}

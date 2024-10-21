@@ -31,3 +31,18 @@
     object-fit: contain;
     object-position: center;
 }
+
+@media (max-width: 1024px) and (min-width: 756px) {
+
+}
+
+@media screen and (max-width: 756px) {
+    .client {
+        margin: 60px 0;
+    }
+
+    .client-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

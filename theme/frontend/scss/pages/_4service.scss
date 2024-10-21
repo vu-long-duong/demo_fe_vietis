@@ -1,6 +1,6 @@
 .service {
     background-color: #F6F6FF;
-    padding-top: 120px;
+    padding-top: 195px;
 }
 
 .service-top {
@@ -89,7 +89,6 @@
 }
 
 // Why
-
 .service-why {
     margin-top: 120px;
     padding-bottom: 120px;
@@ -142,3 +141,33 @@
     line-height: 20px;
 }
 
+@media (max-width: 1024px) and (min-width: 756px) {
+    .service-why-list-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .service {
+        padding-top: 150px;
+    }
+
+    .service-top__text {
+        width: auto;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 24px;
+    }
+
+    .service-why-list {
+        flex-wrap: wrap;
+    }
+
+    .service-why {
+        margin-top: 60px;
+        padding-bottom: 60px;
+    }
+}

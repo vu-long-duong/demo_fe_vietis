@@ -1,14 +1,17 @@
 .general {
-    display: flex;
+    position: relative;
+    top: -59px;
     background-image: url(/theme/frontend/images/general_img_background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 310px;
+    height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .general-list {
-    margin-top: 50px;
     display: inline-flex;
     align-items: center;
     gap: 120px;
@@ -33,4 +36,26 @@
     text-align: center;
     font-size: 20px;
     font-weight: 700;
+}
+
+@media (max-width: 1024px) and (min-width: 756px) {
+    .general {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .general {
+        height: 200px;
+        background-image: none;
+        background-color: #01B9EA;
+    }
+
+    .general-list {
+        gap: 60px;
+    }
+
+    .general-list-item__number {
+        font-size: 30px;
+    }
 }

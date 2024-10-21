@@ -1,12 +1,20 @@
 header {
     position: relative;
-    background-image: url(/theme/frontend/images/header_img_background.png), url(/theme/frontend/images/header_img_background2.png);
+    background-image: url(/theme/frontend/images/header_img_background.png);
     height: 784px;
-    background-position: top, bottom;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, 100% 180px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+    background-color: #01B9EA;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
 
 .header-top-pc-logo {
     display: flex;
@@ -19,6 +27,40 @@ header {
     justify-content: flex-end;
     align-items: center;
     gap: 30px;
+}
+
+.header-top-pc-logo-nav li {
+    position: relative;
+}
+
+.header-top-pc-logo-nav__link {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu__link {
+    display: block;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid rgba(69, 69, 69, 0.2);
+    text-decoration: none;
+    background-color: #FFF;
+}
+.dropdown-menu__link:hover {
+    background-color: #01B9EA;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .header-top-pc-logo-nav__link.header-top-pc-logo-nav__link--active {
@@ -59,7 +101,7 @@ header {
 }
 
 .header-body {
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
 .header-body__title {
@@ -70,8 +112,8 @@ header {
 }
 
 .header-body__describe {
-    display: block;
-    color:  #454545;
+    display: inline-block;
+    color: #454545;
     font-size: 20px;
     font-weight: 400;
     margin-top: 10px;
@@ -103,7 +145,7 @@ header {
 }
 
 .header-bottom {
-    margin-top: 120px;
+    margin-top: 180px;
     margin-left: 50%;
 }
 
@@ -131,10 +173,54 @@ header {
     background-color: #FFF;
 }
 
-.header-bottom__pattern {
-    height: 96px;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
+.header-top-moblie {
+    display: none;
+}
+
+@media (max-width: 1024px) and (min-width: 756px) {
+
+    header {
+        background-size: contain;
+        height: 580px;
+    }
+
+    .header-top-pc-logo-nav {
+       gap: 10px; 
+    }
+
+    .header-body__title {
+        font-size: 50px;
+        width: 300px;
+    }
+
+    .header-bottom {
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    header {
+        background: none;
+        height: 670px;
+    }
+    .header-top-pc {
+        display: none;
+    }
+
+    .header-top-moblie {
+        display: block;
+    }
+
+    .header-body__title {
+        width: auto;
+    }
+
+    .header-bottom {
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    .header-bottom-achievement {
+        gap: 0;
+        justify-content: space-evenly;
+    }
 }

@@ -18,9 +18,12 @@ body {
     padding-bottom: 30px;
 }
 
+.slick-dots li button:before {
+    transform: scale(1.3);
+}
+
 .slick-dots li.slick-active button:before {
     color: #01B9EA;
-    font-size: 0.8rem;
     border-radius: 50%;
     border: #01B9EA solid 1px;
 }

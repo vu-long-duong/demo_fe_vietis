@@ -1,5 +1,6 @@
 WEBS = (function () {
-    var headerHover = function () {
+    var headerHover = function ()
+    {
         var items = document.querySelectorAll('.header-top-pc-logo-nav__link');
         items.forEach(item => {
             item.addEventListener('mouseover', () => item.classList.add('header-top-pc-logo-nav__link--active'));
@@ -20,9 +21,6 @@ WEBS = (function () {
         for (var i = 0; i < accItemHeaders.length; i++) {
             accItemHeaders[i].addEventListener( "click", function ()
             {
-                console.log(
-                    accItemHeaders[i]
-                )
             var parentAccItemHeader = this.parentElement;
     
             if (parentAccItemHeader) {
@@ -90,9 +88,7 @@ WEBS = (function () {
 
     var scrollHeader = function() {
         var header = document.querySelector('header');
-        var headerTop = document.querySelector('.header-top');
-        var headerResponsive = document.querySelector('header .responsive');
-        var childrenheaderTop = Array.from(headerTop.children);
+        var headerTop = document.querySelector('.header-top-pc');
         var headerHeight = header.offsetHeight;
         var isFixed = false;
 
@@ -100,21 +96,8 @@ WEBS = (function () {
 
             var shouldBeFixed = window.scrollY > headerHeight;
             if (shouldBeFixed !== isFixed) {
-
                 isFixed = shouldBeFixed;
                 headerTop.classList.toggle('fixed', isFixed);
-
-                if (isFixed) {
-                    headerResponsive.classList.remove('responsive');
-                    childrenheaderTop.forEach(child => {
-                        child.classList.add('responsive');
-                    });
-                } else {
-                    header.firstElementChild.classList.add('responsive');
-                    childrenheaderTop.forEach(child => {
-                        child.classList.remove('responsive');
-                    });
-                }
             }
         });
     }
@@ -123,7 +106,7 @@ WEBS = (function () {
         _: function () {
             scrollHeader();
             headerHover();
-            menuMobile();
+            // menuMobile();
             slideSlick(".slide-main-list , .leader-list");
             menuAccordion();
         }
