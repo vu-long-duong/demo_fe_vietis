@@ -3,3 +3,52 @@
     justify-content: center;
     align-items: center;
 }
+
+// lagre-80
+@mixin lagre-80 {
+    -webkit-text-stroke: 1px #FFF;
+    color: #01B9EA;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+// middum-40
+@mixin text60 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+// middum-40
+@mixin middum-40 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+// text16-reglar
+@mixin text16-regular {
+    font-weight: 400;
+    line-height: 20px;
+}
+
+// text16-bold 
+@mixin text16-bold {
+    font-weight: 700;
+    line-height: 20px;
+}
+
+// h2
+@mixin h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@mixin background-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin object-cover {
+    object-fit: cover;
+    object-position: center;
+}

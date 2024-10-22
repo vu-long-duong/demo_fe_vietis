@@ -1,12 +1,4 @@
 WEBS = (function () {
-    var headerHover = function ()
-    {
-        var items = document.querySelectorAll('.header-top-pc-logo-nav__link');
-        items.forEach(item => {
-            item.addEventListener('mouseover', () => item.classList.add('header-top-pc-logo-nav__link--active'));
-            item.addEventListener('mouseout', () => item.classList.remove('header-top-pc-logo-nav__link--active'));
-        });
-    }
 
     var menuAccordion = function () {
         var previousElement = null;
@@ -105,7 +97,6 @@ WEBS = (function () {
     return {
         _: function () {
             scrollHeader();
-            headerHover();
             // menuMobile();
             slideSlick(".slide-main-list , .leader-list");
             menuAccordion();

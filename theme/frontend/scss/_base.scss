@@ -8,9 +8,9 @@ body {
 }
 
 .responsive {
-    max-width: 1120px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .slick-dotted.slick-slider {
@@ -23,7 +23,7 @@ body {
 }
 
 .slick-dots li.slick-active button:before {
-    color: #01B9EA;
+    color: $primary-color;
     border-radius: 50%;
-    border: #01B9EA solid 1px;
+    border: $primary-color solid 1px;
 }

@@ -1,41 +1,33 @@
 .general {
     position: relative;
-    top: -59px;
+    top: -75px;
     background-image: url(/theme/frontend/images/general_img_background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 560px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    height: 400px;
+    @include background-cover;
+    @include flex-center;
 
-.general-list {
-    display: inline-flex;
-    align-items: center;
-    gap: 120px;
-}
+    &-list {
+        display: inline-flex;
+        align-items: center;
+        gap: 120px;
 
-.general-list-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-.general-list-item__number {
-    -webkit-text-stroke: 1px #FFF;
-    text-align: center;
-    color: #01B9EA;
-    font-size: 80px;
-    font-weight: 700;
-}
+            &__number {
+                text-align: center;
+                @include lagre-80;
+            }
 
-.general-list-item__text {
-    color: #FFF;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
+            &__text {
+                color: $white-color;
+                text-align: center;
+                @include h2;
+            }
+        }
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 756px) {
@@ -48,14 +40,16 @@
     .general {
         height: 200px;
         background-image: none;
-        background-color: #01B9EA;
-    }
+        background-color: $primary-color;
 
-    .general-list {
-        gap: 60px;
-    }
+        &-list {
+            gap: 60px;
 
-    .general-list-item__number {
-        font-size: 30px;
+            &-item {
+                &__number {
+                    font-size: 30px;
+                }
+            }
+        }
     }
 }
