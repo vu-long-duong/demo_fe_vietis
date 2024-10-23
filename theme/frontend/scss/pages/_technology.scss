@@ -9,7 +9,7 @@
 
         &-item {
             height: 100%;
-            padding-left: 60px;
+            padding-left: 100px;
             padding-right: 10px;
             position: absolute;
             left: 0;
@@ -32,19 +32,20 @@
                 &__title {
                     color: $white-color;
                     @include middum-40;
+                    @include text-truncate(2);
                 }
 
                 &__text {
                     margin-top: 10px;
                     color: $white-color;
                     @include text16-regular;
+                    @include text-truncate(5);
                 }
             }
 
             &-tech__title {
                 color: $white-color;
-                font-weight: 700;
-                line-height: 20px;
+                @include text16-bold;
             }
 
             &-tech-list {
@@ -59,7 +60,6 @@
                     border-radius: 8px;
                     background: $white-color;
                     padding: 10px 7px;
-                    margin: auto;
 
                     img {
                         max-width: 100%;
@@ -71,8 +71,7 @@
 
             &-support__title {
                 color: $white-color;
-                font-weight: 700;
-                line-height: 20px;
+                @include text16-bold;
             }
 
             &-support__text {
@@ -80,6 +79,7 @@
                 margin-top: 10px;
                 color: $white-color;
                 @include text16-regular;
+                @include text-truncate(1);
             }
         }
 

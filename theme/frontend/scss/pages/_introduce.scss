@@ -1,9 +1,5 @@
 .introduce {
-    margin-top: 100px;
-
-    & .responsive {
-        position: relative;
-    }
+    margin-top: 50px;
 
     &-develop {
         display: flex;
@@ -18,10 +14,12 @@
             &__title {
                 color: $text-color;
                 @include middum-40;
+                @include text-truncate(3);
             }
 
-            &__title--highlight {
+            &__title--hightlight {
                 color: $primary-color;
+                @include text-truncate(1);
             }
         }
 
@@ -31,6 +29,7 @@
             &__text {
                 color: $text-color;
                 @include text16-regular;
+                @include text-truncate(5);
             }
         }
     }
@@ -74,7 +73,6 @@
                         cursor: pointer;
 
                         &--active {
-                            background: $primary-color;
 
                             & .introduce-outsource-main-list-item-top__icon {
                                 transform: rotate(180deg);
@@ -82,6 +80,10 @@
 
                             & .introduce-outsource-main-list-item-body__text {
                                 max-height: 150px;
+                            }
+
+                            & .introduce-outsource-main-list-item-top {
+                                background: $primary-color;
                             }
                         }
 

@@ -35,6 +35,7 @@
                     color: $text-color;
                     text-align: center;
                     @include h2;
+                    @include text-truncate(1);
                 }
 
                 &__describe {

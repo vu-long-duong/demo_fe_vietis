@@ -37,25 +37,16 @@ WEBS = (function () {
     }
 
     var menuMobile = function () {
-        var menuMobile = document.querySelector('.header-top-mobile-menu-toggle');
-        var headerList = document.querySelector('.header-top-mobile .wrapper');
-        var btnClose = document.querySelector('.header-top-mobile-top__img');
-        var itemMenus = document.querySelectorAll('.header-top-mobile-list li');
+        var btnMenu = document.querySelector('.header-top-mobile-head__menu');
+        var btnClose = document.querySelector('.header-top-mobile-group-top__close');
+        var mobileGroup = document.querySelector('.header-top-mobile-group');
 
-        function toggleHeaderList(action) {
-            if (action === 'add') {
-                headerList.classList.add('show');
-            } else {
-                headerList.classList.remove('show');
-            }
-        }
+        btnMenu.addEventListener('click', function() {
+            mobileGroup.classList.add('header-top-mobile-group-active');
+        });
 
-        menuMobile.addEventListener('click', () => toggleHeaderList('add'));
-
-        btnClose.addEventListener('click', () => toggleHeaderList('remove'));
-
-        itemMenus.forEach(item => {
-            item.addEventListener('click', () => toggleHeaderList('remove'));
+        btnClose.addEventListener('click', function() {
+            mobileGroup.classList.remove('header-top-mobile-group-active');
         });
     }
 
@@ -80,7 +71,7 @@ WEBS = (function () {
 
     var scrollHeader = function() {
         var header = document.querySelector('header');
-        var headerTop = document.querySelector('.header-top-pc');
+        var headerTop = document.querySelector('.header-top');
         var headerHeight = header.offsetHeight;
         var isFixed = false;
 
@@ -97,7 +88,7 @@ WEBS = (function () {
     return {
         _: function () {
             scrollHeader();
-            // menuMobile();
+            menuMobile();
             slideSlick(".slide-main-list , .leader-list");
             menuAccordion();
         }
