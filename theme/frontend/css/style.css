@@ -71,7 +71,7 @@ body {
 
 header {
   position: relative;
-  background-image: url("../../frontend/images/header_img_background.png");
+  background-image: url("../../images/header_img_background.png");
   height: 784px;
   background-position: center;
   background-repeat: no-repeat;
@@ -392,7 +392,7 @@ header .header-bottom-achievement__two {
 .general {
   position: relative;
   top: -75px;
-  background-image: url("../../frontend/images/general_img_background.png");
+  background-image: url("../../images/general_img_background.png");
   height: 400px;
   background-position: center;
   background-repeat: no-repeat;
@@ -569,7 +569,7 @@ header .header-bottom-achievement__two {
   justify-content: space-between;
   border-radius: 8px;
   padding: 55px 60px;
-  background-image: url("../../frontend/images/introduce_img_background_meeting.png");
+  background-image: url("../../images/introduce_img_background_meeting.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -681,7 +681,7 @@ header .header-bottom-achievement__two {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../frontend/images/service_img_hover.png");
+  background-image: url("../../images/service_img_hover.png");
   color: white;
   display: flex;
   padding-bottom: 50px;
