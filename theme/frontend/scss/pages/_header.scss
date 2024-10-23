@@ -1,6 +1,6 @@
 header {
     position: relative;
-    background-image: url('/theme/frontend/images/header_img_background.png');
+    background-image: url('../../frontend/images/header_img_background.png');
     height: 784px;
     @include background-cover;
 
@@ -15,6 +15,7 @@ header {
                     justify-content: flex-end;
                     align-items: center;
                     gap: 30px;
+                    margin-left: auto;
     
                     li {
                         position: relative;
@@ -150,6 +151,7 @@ header {
 
 .dropdown {
     position: relative;
+    margin-left: 30px;
 
     .dropdown-menu {
         display: none;
@@ -273,6 +275,15 @@ header {
     display: block;
 }
 
+.header-top-mobile .header-top-pc-logo-nav__link--language{
+    color: $white-color;
+    border: $white-color solid 1px;
+    display: block;
+    padding: 5px;
+    border-radius: $border-radius-m;
+
+}
+
 .header-top-mobile-body {
     position: relative;
 }
@@ -280,14 +291,14 @@ header {
 .header-top-mobile-group-top {
     padding: 10px;
     background-color: #2F5AA8;
-    width: 300px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
 }
 
 .header-top-mobile-group-body {
     background-color: #2F5AA8;
-    width: 300px;
+    width: 70%;
 }
 
 .header-top-mobile-group-body-nav__link {
@@ -313,7 +324,7 @@ header {
 
 .header-top-mobile-group-bottom {
     background-color: #2F5AA8;
-    width: 300px;
+    width: 70%;
     display: flex;
 }
 

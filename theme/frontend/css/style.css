@@ -71,7 +71,7 @@ body {
 
 header {
   position: relative;
-  background-image: url("/theme/frontend/images/header_img_background.png");
+  background-image: url("../../frontend/images/header_img_background.png");
   height: 784px;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,6 +87,7 @@ header .header-top-pc-logo-nav {
   justify-content: flex-end;
   align-items: center;
   gap: 30px;
+  margin-left: auto;
 }
 header .header-top-pc-logo-nav li {
   position: relative;
@@ -210,6 +211,7 @@ header .header-bottom-achievement__two {
 
 .dropdown {
   position: relative;
+  margin-left: 30px;
 }
 .dropdown .dropdown-menu {
   display: none;
@@ -309,19 +311,26 @@ header .header-bottom-achievement__two {
   .header-top-mobile-group.header-top-mobile-group-active {
     display: block;
   }
+  .header-top-mobile .header-top-pc-logo-nav__link--language {
+    color: #FFFFFF;
+    border: #FFFFFF solid 1px;
+    display: block;
+    padding: 5px;
+    border-radius: 4px;
+  }
   .header-top-mobile-body {
     position: relative;
   }
   .header-top-mobile-group-top {
     padding: 10px;
     background-color: #2F5AA8;
-    width: 300px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
   }
   .header-top-mobile-group-body {
     background-color: #2F5AA8;
-    width: 300px;
+    width: 70%;
   }
   .header-top-mobile-group-body-nav__link {
     display: block;
@@ -344,7 +353,7 @@ header .header-bottom-achievement__two {
   }
   .header-top-mobile-group-bottom {
     background-color: #2F5AA8;
-    width: 300px;
+    width: 70%;
     display: flex;
   }
   .header-top-mobile-group-bottom-mail {
@@ -383,7 +392,7 @@ header .header-bottom-achievement__two {
 .general {
   position: relative;
   top: -75px;
-  background-image: url(/theme/frontend/images/general_img_background.png);
+  background-image: url("../../frontend/images/general_img_background.png");
   height: 400px;
   background-position: center;
   background-repeat: no-repeat;
@@ -560,7 +569,7 @@ header .header-bottom-achievement__two {
   justify-content: space-between;
   border-radius: 8px;
   padding: 55px 60px;
-  background-image: url(/theme/frontend/images/introduce_img_background_meeting.png);
+  background-image: url("../../frontend/images/introduce_img_background_meeting.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -672,7 +681,7 @@ header .header-bottom-achievement__two {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/theme/frontend/images/service_img_hover.png);
+  background-image: url("../../frontend/images/service_img_hover.png");
   color: white;
   display: flex;
   padding-bottom: 50px;
