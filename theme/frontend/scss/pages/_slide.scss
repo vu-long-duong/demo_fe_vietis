@@ -32,23 +32,27 @@
                     @include text-truncate(12);
                 }
 
-                &-user {
-                    margin-top: 30px;
-                    display: inline-flex;
-                    align-items: end;
-                    gap: 20px;
+                &-group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
 
-                    &__img {
-                        img {
-                            border-radius: 50%;
-                            @include object-cover;
+                    &-user {
+                        display: flex;
+                        align-items: end;
+                        gap: 20px;
+    
+                        &__img {
+                            img {
+                                border-radius: 50%;
+                                @include object-cover;
+                            }
                         }
-                    }
-
-                    &__name {
-                        color: $text-color;
-                        font-weight: 700;
-                        line-height: 20px;
+    
+                        &__name {
+                            color: $text-color;
+                            @include text16-bold;
+                        }
                     }
                 }
             }

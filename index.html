@@ -16,6 +16,25 @@
     
     <!-- Custom css -->
     <link rel="stylesheet" href="./theme/frontend/css/style.css">
+    <style>
+        #banner-video {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0%;
+            right: 0;
+            display: none;
+        }
+
+        #banner-video-container iframe {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            width: auto;
+            max-width: 800px;
+            max-height: 450px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,26 +47,26 @@
                         </a>
                         <ul class="header-top-pc-logo-nav">
                             <li>
-                                <a href="#" class="header-top-pc-logo-nav__link">Home</a>
+                                <a href="#" class="">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="header-top-pc-logo-nav__link">About us</a>
+                                <a href="#" class="">About us</a>
                             </li>
                             <li>
-                                <a href="#" class="header-top-pc-logo-nav__link">Service</a>
+                                <a href="#" class="">Service</a>
                             </li>
                             <li>
-                                <a href="#" class="header-top-pc-logo-nav__link">Products</a>
+                                <a href="#" class="">Products</a>
                             </li>
                             <li>
-                                <a href="#" class="header-top-pc-logo-nav__link">Blogs</a>
+                                <a href="#" class="">Blogs</a>
                             </li>
                             <li>
-                                <a href="#" class="header-top-pc-logo-nav__link">Case study</a>
+                                <a href="#" class="">Case study</a>
                             </li>
                         </ul>
-                        <div class="header-top-pc-logo-language">
-                            <a href="#" class="header-top-pc-logo-nav__link header-top-pc-logo-nav__link--language">JP</a>
+                        <div class="dropdown header-top-pc-logo-language">
+                            <a href="#" class="header-top-pc-logo-nav__link--language">JP</a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" class="dropdown-menu__link">VI</a></li>
                                 <li><a href="#" class="dropdown-menu__link">EN</a></li>
@@ -184,22 +203,25 @@
                 </div>
             </div>
         </div>
-        <div class="header-body">
-            <div class="responsive">
-                <h1 class="header-body__title">
+    </header>
+
+    <div class="banner">
+        <div class="responsive">
+            <div class="banner-body">
+                <h1 class="banner-body__title">
                     In Pursuit of Excellence
                 </h1>
-                <span class="header-body__describe">
+                <span class="banner-body__describe">
                     To be your long term Tech - Partner
                 </span>
-                <div class="header-body-view">
-                    <a href="" class="header-body-view__icon">
+                <div class="banner-body-view">
+                    <a href="#" class="banner-body-view__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36ZM13.5 25.7942L27 18L13.5 10.2058L13.5 25.7942Z" fill="#FC7561"/>
                         </svg>
                     </a>
-                    <div class="header-body-inquiry">
-                        <div class="header-body-inquiry__icon">
+                    <div class="banner-body-inquiry">
+                        <div class="banner-body-inquiry__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clip-path="url(#clip0_314_2178)">
                                     <path d="M5.83333 12.5002H11.6667V14.1668H5.83333V12.5002ZM5.83333 9.16683H14.1667V10.8335H5.83333V9.16683ZM5.83333 5.8335H14.1667V7.50016H5.83333V5.8335ZM15.8333 2.50016H12.35C12 1.5335 11.0833 0.833496 10 0.833496C8.91667 0.833496 8 1.5335 7.65 2.50016H4.16667C4.05 2.50016 3.94167 2.5085 3.83333 2.5335C3.50833 2.60016 3.21667 2.76683 2.99167 2.99183C2.84167 3.14183 2.71667 3.32516 2.63333 3.52516C2.55 3.71683 2.5 3.9335 2.5 4.16683V15.8335C2.5 16.0585 2.55 16.2835 2.63333 16.4835C2.71667 16.6835 2.84167 16.8585 2.99167 17.0168C3.21667 17.2418 3.50833 17.4085 3.83333 17.4752C3.94167 17.4918 4.05 17.5002 4.16667 17.5002H15.8333C16.75 17.5002 17.5 16.7502 17.5 15.8335V4.16683C17.5 3.25016 16.75 2.50016 15.8333 2.50016ZM10 2.29183C10.3417 2.29183 10.625 2.57516 10.625 2.91683C10.625 3.2585 10.3417 3.54183 10 3.54183C9.65833 3.54183 9.375 3.2585 9.375 2.91683C9.375 2.57516 9.65833 2.29183 10 2.29183ZM15.8333 15.8335H4.16667V4.16683H15.8333V15.8335Z" fill="white"/>
@@ -212,28 +234,16 @@
                                 </defs>
                             </svg>
                         </div>
-                        <span class="header-body-inquiry__text">Inquiry</span>
+                        <span class="banner-body-inquiry__text">Inquiry</span>
                     </div>
                 </div>
             </div>
+            <div id="banner-video"></div>
         </div>
-        <div class="header-bottom">
-            <div class="header-bottom-achievement">
-                <div class="header-bottom-achievement-item">
-                    <div class="header-bottom-achievement__one">
-                        <img src="./theme/frontend/images/header_img_iso1.png" alt="">
-                    </div>
-                </div>
-                <div class="header-bottom-achievement-item">
-                    <div class="header-bottom-achievement__two">
-                        <img src="./theme/frontend/images/header_img_iso2.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    </div>
     
-    <section class="general">
+    <!-- <section class="general">
+        <img src="./theme/frontend/images/general_img_background.png" alt="Background Image" class="general-bg">
         <div class="responsive">
             <div class="general-list">
                 <div class="general-list-item">
@@ -250,7 +260,148 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- <div class="develop">
+        <div class="responsive">
+            <div class="develop-top">
+                <h3 class="develop-top__title">
+                    Scale Up your tech team though out <br>
+                    <span class="develop-top__title--hightlight">
+                        highly skilled developers
+                    </span>
+                </h3>
+                <div class="develop-body">
+                    <p class="develop-body__text">
+                        VietIS specializing in providing digital transformation consulting services and software solutions in many domains. We have a highly experienced in house technical team which provides enterprise-level IT consulting design, procurement, and support to customers.
+                    </p>
+                </div>
+            </div>
+            <div class="develop__img">
+                <img src="./theme/frontend/images/introduce_img_01.png" alt="">
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="outsource">
+        <div class="outsource__img">
+            <img src="./theme/frontend/images/introduce_img_02.png" alt="">
+        </div>
+        <div class="outsource-main">
+            <h3 class="outsource-main__title">
+                Why Outsource Your IT Services?
+            </h3>
+            <div class="outsource-main-list">
+                <div class="outsource-main-list-item">
+                    <div class="outsource-main-list-item-top">
+                        <h3 class="outsource-main-list-item-top__title">
+                            Save Costs
+                        </h3>
+                        <div class="outsource-main-list-item-top__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                                <g clip-path="url(#clip0_31_999)">
+                                    <path d="M12.0964 12.885L19.404 19.755L26.7117 12.885L28.9565 15L19.404 24L9.85156 15L12.0964 12.885Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_31_999">
+                                    <rect width="38.2099" height="36" fill="white" transform="translate(0.298828)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="outsource-main-list-item-body">
+                        <p class="outsource-main-list-item-body__text">
+                            It takes a lot of resources to manage IT. In addition to money and time, hardware and software need to be purchased, installed, and maintained. Additionally, hiring, training, retaining, and managing IT workers costs money and time. You can lower operational costs by outsourcing your IT services and lowering the price associated with these vital IT resources. Additionally, you will spend less on hiring, firing, annual bonuses, health insurance, retirement payments, and other expenses.
+                        </p>
+                    </div>
+                </div>
+                <div class="outsource-main-list-item">
+                    <div class="outsource-main-list-item-top">
+                        <h3 class="outsource-main-list-item-top__title">
+                            Simplify Procurement
+                        </h3>
+                        <div class="outsource-main-list-item-top__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                                <g clip-path="url(#clip0_31_999)">
+                                    <path d="M12.0964 12.885L19.404 19.755L26.7117 12.885L28.9565 15L19.404 24L9.85156 15L12.0964 12.885Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_31_999">
+                                    <rect width="38.2099" height="36" fill="white" transform="translate(0.298828)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="outsource-main-list-item-body">
+                        <p class="outsource-main-list-item-body__text">
+                            It takes a lot of resources to manage IT. In addition to money and time, hardware and software need to be purchased, installed, and maintained. Additionally, hiring, training, retaining, and managing IT workers costs money and time. You can lower operational costs by outsourcing your IT services and lowering the price associated with these vital IT resources. Additionally, you will spend less on hiring, firing, annual bonuses, health insurance, retirement payments, and other expenses.
+                        </p>
+                    </div>
+                </div>
+                <div class="outsource-main-list-item">
+                    <div class="outsource-main-list-item-top">
+                        <h3 class="outsource-main-list-item-top__title">
+                            Flexibly Scalable
+                        </h3>
+                        <div class="outsource-main-list-item-top__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                                <g clip-path="url(#clip0_31_999)">
+                                    <path d="M12.0964 12.885L19.404 19.755L26.7117 12.885L28.9565 15L19.404 24L9.85156 15L12.0964 12.885Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_31_999">
+                                    <rect width="38.2099" height="36" fill="white" transform="translate(0.298828)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="outsource-main-list-item-body">
+                        <p class="outsource-main-list-item-body__text">
+                            It takes a lot of resources to manage IT. In addition to money and time, hardware and software need to be purchased, installed, and maintained. Additionally, hiring, training, retaining, and managing IT workers costs money and time. You can lower operational costs by outsourcing your IT services and lowering the price associated with these vital IT resources. Additionally, you will spend less on hiring, firing, annual bonuses, health insurance, retirement payments, and other expenses.
+                        </p>
+                    </div>
+                </div>
+                <div class="outsource-main-list-item">
+                    <div class="outsource-main-list-item-top">
+                        <h3 class="outsource-main-list-item-top__title">
+                            Utilise more experience
+                        </h3>
+                        <div class="outsource-main-list-item-top__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                                <g clip-path="url(#clip0_31_999)">
+                                    <path d="M12.0964 12.885L19.404 19.755L26.7117 12.885L28.9565 15L19.404 24L9.85156 15L12.0964 12.885Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_31_999">
+                                    <rect width="38.2099" height="36" fill="white" transform="translate(0.298828)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="outsource-main-list-item-body">
+                        <p class="outsource-main-list-item-body__text">
+                            It takes a lot of resources to manage IT. In addition to money and time, hardware and software need to be purchased, installed, and maintained. Additionally, hiring, training, retaining, and managing IT workers costs money and time. You can lower operational costs by outsourcing your IT services and lowering the price associated with these vital IT resources. Additionally, you will spend less on hiring, firing, annual bonuses, health insurance, retirement payments, and other expenses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="metting">
+        <h3 class="metting__title">
+            Your Long Term Trusted Tech Partner
+        </h3>
+        <div class="metting-call">
+            <span class="metting-call__text">
+                Arrange Meeting Right Now!
+            </span>
+        </div>
+    </div> -->
 
     <section class="introduce">
         <div class="responsive">
@@ -380,7 +531,7 @@
                     </div>
                 </div>
             </div>
-            <div class="introduce-metting responsive">
+            <div class="introduce-metting">
                 <h3 class="introduce-metting__title">
                     Your Long Term Trusted Tech Partner
                 </h3>
@@ -454,7 +605,7 @@
                     Why VietIS?
                 </h2>
                 <div class="service-why-list">
-                    <a href="#" class="service-why-list-item">
+                    <div class="service-why-list-item">
                         <div class="service-why-list-item__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none">
                                 <path d="M46.1176 20.7483L28.6961 36.8252C28.2569 37.2273 27.7038 37.4318 27.1504 37.4318C26.5571 37.4318 25.9698 37.198 25.5191 36.7473L17.4429 28.5092C17.178 28.2388 17.1822 27.8044 17.4526 27.5395L19.7303 25.3056C20.0007 25.04 20.4351 25.0446 20.7003 25.3149L26.7643 31.4965C27.0241 31.762 27.4467 31.7717 27.7192 31.5209L45.6306 14.9882C45.9838 14.6623 45.901 14.0835 45.4699 13.8699L29.5124 5.95048C29.1861 5.80215 28.8161 5.80215 28.485 5.95048L11.4529 14.3982C11.0137 14.5979 10.7285 15.0429 10.7285 15.5274V35.3151C10.7285 35.4565 10.7515 35.5879 10.791 35.7244C11.4357 37.5852 15.1377 50.0891 28.7931 52.181C28.9299 52.1982 29.0716 52.1982 29.203 52.181C42.6448 50.1208 46.4417 37.9749 47.1673 35.8144C47.2356 35.6172 47.2673 35.4102 47.2673 35.2009V21.2522C47.2673 20.6541 46.5562 20.3429 46.1179 20.7483" fill="#01B9EA"/>
@@ -466,8 +617,8 @@
                         <div class="service-why-list-item__text">
                             Highly selected vendors from our rapidly expanding vendor ecosystem
                         </div>
-                    </a>
-                    <a href="#" class="service-why-list-item">
+                    </div>
+                    <div class="service-why-list-item service-why-list-item--colorEDFAFE">
                         <div class="service-why-list-item__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59" fill="none">
                                 <path d="M1.03388 26.4558H13.2343C13.7929 26.4558 14.2506 25.9981 14.2506 25.4379C14.2506 24.8778 13.7929 24.4216 13.2343 24.4216H1.03388C0.473714 24.4216 0.0175781 24.8778 0.0175781 25.4379C0.0175781 25.9981 0.473714 26.4558 1.03388 26.4558Z" fill="#01B9EA"/>
@@ -491,8 +642,8 @@
                         <div class="service-why-list-item__text">
                             Using data-driven matching and improved profile creation
                         </div>
-                    </a>
-                    <a href="#" class="service-why-list-item">
+                    </div>
+                    <div class="service-why-list-item service-why-list-item--colorEBF5FF">
                         <div class="service-why-list-item__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                                 <g clip-path="url(#clip0_314_2351)">
@@ -512,7 +663,7 @@
                         <div class="service-why-list-item__text">
                             An efficient platform for the full remote employee augmentation process
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -528,58 +679,55 @@
                     <p class="technology-list-item-main__text">
                         This is a dedicated system development project for employees and customers specializing in insurance, helping agents' employees distribute customers who register by paper or phone call, and customers can use the web to register online insurance packages.
                     </p>
-                </div>
-                <div class="technology-list-item-tech">
-                    <h4 class="technology-list-item-tech__title">
-                        Technologies
-                    </h4>
-                    <div class="technology-list-item-tech-list">
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo01.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo02.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo03.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo04.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo05.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo06.png" alt="">
-                        </div>
+                    <div class="technology-list-item-main-tech">
+                        <h4 class="technology-list-item-main-tech__title">
+                            Technologies
+                        </h4>
+                        <ul class="technology-list-item-main-tech-list">
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo01.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo02.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo03.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo04.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo05.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo06.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="technology-list-item-main-support">
+                        <h3 class="technology-list-item-main-support__title">
+                            Business Supported
+                        </h3>
+                        <span class="technology-list-item-main-support__text">
+                            Design, research, proposal creation, coding, unit testing
+                        </span>
+                    </div>
+                    <div class="technology-list-item-main-support">
+                        <h3 class="technology-list-item-main-support__title">
+                            Release Achievement
+                        </h3>
+                        <a href="" class="technology-list-item-main-support__text">
+                            www.lifenet-seimei.co.jp
+                        </a>
                     </div>
                 </div>
-                <div class="technology-list-item-support">
-                    <h3 class="technology-list-item-support__title">
-                        Business Supported
-                    </h3>
-                    <span class="technology-list-item-support__text">
-                        Design, research, proposal creation, coding, unit testing
-                    </span>
-                </div>
-                <div class="technology-list-item-support">
-                    <h3 class="technology-list-item-support__title">
-                        Release Achievement
-                    </h3>
-                    <span class="technology-list-item-support__text">
-                        www.lifenet-seimei.co.jp
-                    </span>
-                </div>
             </div>
-            <div class="technology-list__img">
+            <div class="technology-list-item">
                 <img src="./theme/frontend/images/technology_img_01.png" alt="">
             </div>
         </div>
         <div class="technology-list">
-            <div class="technology-list__img">
-                <img src="./theme/frontend/images/technology_img_02.png" alt="">
-            </div>
-            <div class="technology-list-item technology-list-item--right">
+            <div class="technology-list-item">
                 <div class="technology-list-item-main">
                     <h3 class="technology-list-item-main__title">
                         Photo Services Web
@@ -587,48 +735,51 @@
                     <p class="technology-list-item-main__text">
                         A project to switch Econtext to SoftBank as the payment processor for a website that prints images, postcards, photobooks, and prints photos. VietIS is in charge from the basic design to the operation and maintenance phases.
                     </p>
-                </div>
-                <div class="technology-list-item-tech">
-                    <h4 class="technology-list-item-tech__title">
-                        Technologies
-                    </h4>
-                    <div class="technology-list-item-tech-list">
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo01.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo02.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo03.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo04.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo05.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo06.png" alt="">
-                        </div>
+                    <div class="technology-list-item-main-tech">
+                        <h4 class="technology-list-item-main-tech__title">
+                            Technologies
+                        </h4>
+                        <ul class="technology-list-item-main-tech-list">
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo01.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo02.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo03.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo04.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo05.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo06.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="technology-list-item-main-support">
+                        <h3 class="technology-list-item-main-support__title">
+                            Business Supported
+                        </h3>
+                        <span class="technology-list-item-main-support__text">
+                            Design, research, proposal creation, coding, unit testing
+                        </span>
+                    </div>
+                    <div class="technology-list-item-main-support">
+                        <h3 class="technology-list-item-main-support__title">
+                            Release Achievement
+                        </h3>
+                        <a href="" class="technology-list-item-main-support__text">
+                            www.lifenet-seimei.co.jp
+                        </a>
                     </div>
                 </div>
-                <div class="technology-list-item-support">
-                    <h3 class="technology-list-item-support__title">
-                        Business Supported
-                    </h3>
-                    <span class="technology-list-item-support__text">
-                        Design, research, proposal creation, coding, unit testing
-                    </span>
-                </div>
-                <div class="technology-list-item-support">
-                    <h3 class="technology-list-item-support__title">
-                        Release Achievement
-                    </h3>
-                    <span class="technology-list-item-support__text">
-                        www.lifenet-seimei.co.jp
-                    </span>
-                </div>
+            </div>
+            <div class="technology-list-item">
+                <img src="./theme/frontend/images/technology_img_02.png" alt="">
             </div>
         </div>
         <div class="technology-list">
@@ -640,50 +791,50 @@
                     <p class="technology-list-item-main__text">
                         Through Line Application, developing and maintaining a customer service management system for the Supply System. In specifically, in a gas station has not ony car fuel service but also has car maintenance, car wash and registration document support system. We also take part in system maintenance and operation stage.
                     </p>
-                </div>
-                <div class="technology-list-item-tech">
-                    <h4 class="technology-list-item-tech__title">
-                        Technologies
-                    </h4>
-                    <div class="technology-list-item-tech-list">
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo01.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo02.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo03.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo04.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo05.png" alt="">
-                        </div>
-                        <div class="technology-list-item-tech-list__item">
-                            <img src="./theme/frontend/images/technology_img_logo06.png" alt="">
-                        </div>
+                    <div class="technology-list-item-main-tech">
+                        <h4 class="technology-list-item-main-tech__title">
+                            Technologies
+                        </h4>
+                        <ul class="technology-list-item-main-tech-list">
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo01.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo02.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo03.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo04.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo05.png" alt="">
+                            </li>
+                            <li class="technology-list-item-main-tech-list__item">
+                                <img src="./theme/frontend/images/technology_img_logo06.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="technology-list-item-main-support">
+                        <h3 class="technology-list-item-main-support__title">
+                            Business Supported
+                        </h3>
+                        <span class="technology-list-item-main-support__text">
+                            Design, research, proposal creation, coding, unit testing
+                        </span>
+                    </div>
+                    <div class="technology-list-item-main-support">
+                        <h3 class="technology-list-item-main-support__title">
+                            Release Achievement
+                        </h3>
+                        <a href="" class="technology-list-item-main-support__text">
+                            www.lifenet-seimei.co.jp
+                        </a>
                     </div>
                 </div>
-                <div class="technology-list-item-support">
-                    <h3 class="technology-list-item-support__title">
-                        Business Supported
-                    </h3>
-                    <span class="technology-list-item-support__text">
-                        Design, research, proposal creation, coding, unit testing
-                    </span>
-                </div>
-                <div class="technology-list-item-support">
-                    <h3 class="technology-list-item-support__title">
-                        Release Achievement
-                    </h3>
-                    <span class="technology-list-item-support__text">
-                        www.lifenet-seimei.co.jp
-                    </span>
-                </div>
             </div>
-            <div class="technology-list__img">
+            <div class="technology-list-item">
                 <img src="./theme/frontend/images/technology_img_03.png" alt="">
             </div>
         </div>
@@ -703,61 +854,117 @@
                         <p class="slide-main-list-item__text">
                             VietIS is known as an offshore company. There were quite a few offshore vendors exhibiting there, and honestly, it was difficult to decide which company was better. At this time, I had a chance to know and talk with Mr. Tan- Vice President of VietIS. I could see that he has a high level of technical capabilities and a fast capability to handle. There’s no doubt that Mr. Tan’s Japanese capability is an important element that made me choose VietIS to develop my product.To be honest, I felt that there was a gap in developers’ technical capabilities. But that is covered by other more experienced staff members, even if the program isn’t at a level that meets our requirements. Senior developers can follow instantly.
                         </p>
-                        <div class="slide-main-list-item-user">
-                            <div class="slide-main-list-item-user__img">
-                                <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                        <div class="slide-main-list-item-group">
+                            <div class="slide-main-list-item-group-user">
+                                <div class="slide-main-list-item-group-user__img">
+                                    <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                                </div>
+                                <span class="slide-main-list-item-group-user__name">
+                                    First<br>Inc.
+                                </span>
                             </div>
-                            <span class="slide-main-list-item-user__name">
-                                First<br>Inc.
-                            </span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="148" height="155" viewBox="0 0 148 155" fill="none">
+                                    <g opacity="0.2" clip-path="url(#clip0_314_1992)">
+                                      <path opacity="0.6" d="M38.7634 106.761C38.1287 108.088 39.0963 109.623 40.5678 109.623H54.5411C55.3113 109.623 56.0131 109.181 56.3454 108.486L67.8773 84.3702C68.0061 84.1009 68.073 83.806 68.073 83.5074V47.4675C68.073 46.363 67.1775 45.4675 66.073 45.4675H33.2588C32.1542 45.4675 31.2588 46.363 31.2588 47.4675V81.961C31.2588 83.0656 32.1542 83.961 33.2588 83.961H46.4926C47.964 83.961 48.9317 85.4964 48.2969 86.8238L38.7634 106.761ZM87.849 106.761C87.2142 108.088 88.1819 109.623 89.6533 109.623H103.627C104.397 109.623 105.099 109.181 105.431 108.486L116.963 84.3702C117.092 84.1009 117.159 83.806 117.159 83.5074V47.4675C117.159 46.363 116.263 45.4675 115.159 45.4675H82.3444C81.2398 45.4675 80.3444 46.363 80.3444 47.4675V81.961C80.3444 83.0656 81.2398 83.961 82.3444 83.961H95.5782C97.0496 83.961 98.0173 85.4964 97.3825 86.8238L87.849 106.761Z" fill="#A9B5C9"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_314_1992">
+                                        <rect width="147.257" height="153.974" fill="white" transform="translate(0.580078 0.558472)"/>
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="slide-main-list-item">
                         <h2 class="slide-main-list-item__title">
-                            2HEAR FROM OUR CLIENT
+                            HEAR FROM OUR CLIENT
                         </h2>
                         <p class="slide-main-list-item__text">
                             VietIS is known as an offshore company. There were quite a few offshore vendors exhibiting there, and honestly, it was difficult to decide which company was better. At this time, I had a chance to know and talk with Mr. Tan- Vice President of VietIS. I could see that he has a high level of technical capabilities and a fast capability to handle. There’s no doubt that Mr. Tan’s Japanese capability is an important element that made me choose VietIS to develop my product.To be honest, I felt that there was a gap in developers’ technical capabilities. But that is covered by other more experienced staff members, even if the program isn’t at a level that meets our requirements. Senior developers can follow instantly.
                         </p>
-                        <div class="slide-main-list-item-user">
-                            <div class="slide-main-list-item-user__img">
-                                <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                        <div class="slide-main-list-item-group">
+                            <div class="slide-main-list-item-group-user">
+                                <div class="slide-main-list-item-group-user__img">
+                                    <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                                </div>
+                                <span class="slide-main-list-item-group-user__name">
+                                    First<br>Inc.
+                                </span>
                             </div>
-                            <span class="slide-main-list-item-user__name">
-                                First<br>Inc.
-                            </span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="148" height="155" viewBox="0 0 148 155" fill="none">
+                                    <g opacity="0.2" clip-path="url(#clip0_314_1992)">
+                                      <path opacity="0.6" d="M38.7634 106.761C38.1287 108.088 39.0963 109.623 40.5678 109.623H54.5411C55.3113 109.623 56.0131 109.181 56.3454 108.486L67.8773 84.3702C68.0061 84.1009 68.073 83.806 68.073 83.5074V47.4675C68.073 46.363 67.1775 45.4675 66.073 45.4675H33.2588C32.1542 45.4675 31.2588 46.363 31.2588 47.4675V81.961C31.2588 83.0656 32.1542 83.961 33.2588 83.961H46.4926C47.964 83.961 48.9317 85.4964 48.2969 86.8238L38.7634 106.761ZM87.849 106.761C87.2142 108.088 88.1819 109.623 89.6533 109.623H103.627C104.397 109.623 105.099 109.181 105.431 108.486L116.963 84.3702C117.092 84.1009 117.159 83.806 117.159 83.5074V47.4675C117.159 46.363 116.263 45.4675 115.159 45.4675H82.3444C81.2398 45.4675 80.3444 46.363 80.3444 47.4675V81.961C80.3444 83.0656 81.2398 83.961 82.3444 83.961H95.5782C97.0496 83.961 98.0173 85.4964 97.3825 86.8238L87.849 106.761Z" fill="#A9B5C9"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_314_1992">
+                                        <rect width="147.257" height="153.974" fill="white" transform="translate(0.580078 0.558472)"/>
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="slide-main-list-item">
                         <h2 class="slide-main-list-item__title">
-                            3HEAR FROM OUR CLIENT
+                            HEAR FROM OUR CLIENT
                         </h2>
                         <p class="slide-main-list-item__text">
                             VietIS is known as an offshore company. There were quite a few offshore vendors exhibiting there, and honestly, it was difficult to decide which company was better. At this time, I had a chance to know and talk with Mr. Tan- Vice President of VietIS. I could see that he has a high level of technical capabilities and a fast capability to handle. There’s no doubt that Mr. Tan’s Japanese capability is an important element that made me choose VietIS to develop my product.To be honest, I felt that there was a gap in developers’ technical capabilities. But that is covered by other more experienced staff members, even if the program isn’t at a level that meets our requirements. Senior developers can follow instantly.
                         </p>
-                        <div class="slide-main-list-item-user">
-                            <div class="slide-main-list-item-user__img">
-                                <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                        <div class="slide-main-list-item-group">
+                            <div class="slide-main-list-item-group-user">
+                                <div class="slide-main-list-item-group-user__img">
+                                    <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                                </div>
+                                <span class="slide-main-list-item-group-user__name">
+                                    First<br>Inc.
+                                </span>
                             </div>
-                            <span class="slide-main-list-item-user__name">
-                                First<br>Inc.
-                            </span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="148" height="155" viewBox="0 0 148 155" fill="none">
+                                    <g opacity="0.2" clip-path="url(#clip0_314_1992)">
+                                      <path opacity="0.6" d="M38.7634 106.761C38.1287 108.088 39.0963 109.623 40.5678 109.623H54.5411C55.3113 109.623 56.0131 109.181 56.3454 108.486L67.8773 84.3702C68.0061 84.1009 68.073 83.806 68.073 83.5074V47.4675C68.073 46.363 67.1775 45.4675 66.073 45.4675H33.2588C32.1542 45.4675 31.2588 46.363 31.2588 47.4675V81.961C31.2588 83.0656 32.1542 83.961 33.2588 83.961H46.4926C47.964 83.961 48.9317 85.4964 48.2969 86.8238L38.7634 106.761ZM87.849 106.761C87.2142 108.088 88.1819 109.623 89.6533 109.623H103.627C104.397 109.623 105.099 109.181 105.431 108.486L116.963 84.3702C117.092 84.1009 117.159 83.806 117.159 83.5074V47.4675C117.159 46.363 116.263 45.4675 115.159 45.4675H82.3444C81.2398 45.4675 80.3444 46.363 80.3444 47.4675V81.961C80.3444 83.0656 81.2398 83.961 82.3444 83.961H95.5782C97.0496 83.961 98.0173 85.4964 97.3825 86.8238L87.849 106.761Z" fill="#A9B5C9"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_314_1992">
+                                        <rect width="147.257" height="153.974" fill="white" transform="translate(0.580078 0.558472)"/>
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="slide-main-list-item">
                         <h2 class="slide-main-list-item__title">
-                            4HEAR FROM OUR CLIENT
+                            HEAR FROM OUR CLIENT
                         </h2>
                         <p class="slide-main-list-item__text">
                             VietIS is known as an offshore company. There were quite a few offshore vendors exhibiting there, and honestly, it was difficult to decide which company was better. At this time, I had a chance to know and talk with Mr. Tan- Vice President of VietIS. I could see that he has a high level of technical capabilities and a fast capability to handle. There’s no doubt that Mr. Tan’s Japanese capability is an important element that made me choose VietIS to develop my product.To be honest, I felt that there was a gap in developers’ technical capabilities. But that is covered by other more experienced staff members, even if the program isn’t at a level that meets our requirements. Senior developers can follow instantly.
                         </p>
-                        <div class="slide-main-list-item-user">
-                            <div class="slide-main-list-item-user__img">
-                                <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                        <div class="slide-main-list-item-group">
+                            <div class="slide-main-list-item-group-user">
+                                <div class="slide-main-list-item-group-user__img">
+                                    <img src="./theme/frontend/images/slide_img_user.png" alt="">
+                                </div>
+                                <span class="slide-main-list-item-group-user__name">
+                                    First<br>Inc.
+                                </span>
                             </div>
-                            <span class="slide-main-list-item-user__name">
-                                First<br>Inc.
-                            </span>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="148" height="155" viewBox="0 0 148 155" fill="none">
+                                    <g opacity="0.2" clip-path="url(#clip0_314_1992)">
+                                      <path opacity="0.6" d="M38.7634 106.761C38.1287 108.088 39.0963 109.623 40.5678 109.623H54.5411C55.3113 109.623 56.0131 109.181 56.3454 108.486L67.8773 84.3702C68.0061 84.1009 68.073 83.806 68.073 83.5074V47.4675C68.073 46.363 67.1775 45.4675 66.073 45.4675H33.2588C32.1542 45.4675 31.2588 46.363 31.2588 47.4675V81.961C31.2588 83.0656 32.1542 83.961 33.2588 83.961H46.4926C47.964 83.961 48.9317 85.4964 48.2969 86.8238L38.7634 106.761ZM87.849 106.761C87.2142 108.088 88.1819 109.623 89.6533 109.623H103.627C104.397 109.623 105.099 109.181 105.431 108.486L116.963 84.3702C117.092 84.1009 117.159 83.806 117.159 83.5074V47.4675C117.159 46.363 116.263 45.4675 115.159 45.4675H82.3444C81.2398 45.4675 80.3444 46.363 80.3444 47.4675V81.961C80.3444 83.0656 81.2398 83.961 82.3444 83.961H95.5782C97.0496 83.961 98.0173 85.4964 97.3825 86.8238L87.849 106.761Z" fill="#A9B5C9"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_314_1992">
+                                        <rect width="147.257" height="153.974" fill="white" transform="translate(0.580078 0.558472)"/>
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1008,9 +1215,9 @@
                                 </defs>
                             </svg>
                         </div>
-                        <span class="footer-top-item-phone__text">
+                        <a href="" class="footer-top-item-phone__text">
                             +84-24-6293-9036
-                        </span>
+                        </a>
                     </div>
                     <div class="footer-top-item-mail">
                         <div class="footer-top-item-mail__icon">
@@ -1018,9 +1225,9 @@
                                 <path d="M14.5938 1.90625H1.40625C0.631813 1.90625 0 2.53737 0 3.3125V12.6875C0 13.46 0.629 14.0938 1.40625 14.0938H14.5938C15.3663 14.0938 16 13.4648 16 12.6875V3.3125C16 2.54 15.371 1.90625 14.5938 1.90625ZM14.3996 2.84375L8.02981 9.21353L1.60497 2.84375H14.3996ZM0.9375 12.4934V3.50216L5.45247 7.97841L0.9375 12.4934ZM1.60041 13.1562L6.11822 8.63844L7.70125 10.2079C7.8845 10.3896 8.18022 10.389 8.36272 10.2064L9.90625 8.66291L14.3996 13.1562H1.60041ZM15.0625 12.4933L10.5692 8L15.0625 3.50662V12.4933Z" fill="white"/>
                             </svg>
                         </div>
-                        <span class="footer-top-item-mail__text">
+                        <a href="" class="footer-top-item-mail__text">
                             info@vietis.com.vn
-                        </span>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-top-item">
@@ -1055,9 +1262,9 @@
                                 </defs>
                             </svg>
                         </div>
-                        <span class="footer-top-item-phone__text">
+                        <a href="" class="footer-top-item-phone__text">
                             (81) 3-5759-4881
-                        </span>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-top-item">
@@ -1104,11 +1311,11 @@
                         <img src="./theme/frontend/images/footer_img_youtube.png" alt="">
                     </div>
                 </div>
-                <div class="footer-bottom-text">
-                    <h3 class="footer-bottom-text__item">Profile company</h3>
-                    <h3 class="footer-bottom-text__item">Line service</h3>
-                    <h3 class="footer-bottom-text__item">VISInsight</h3>
-                </div>
+                <ul class="footer-bottom-text">
+                    <li><a href="#">Profile company</a></li>
+                    <li><a href="#">Line service</a></li>
+                    <li><a href="#">VISInsight</a></li>
+                </ul>
             </div>
         </div>
     </footer>

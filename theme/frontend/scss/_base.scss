@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    max-width: 1366px;
-    margin: 0 auto;
+    // max-width: 1366px;
+    // margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
 }
@@ -20,12 +20,29 @@ body {
     padding-bottom: 30px;
 }
 
-.slick-dots li button:before {
-    transform: scale(1.3);
+.slick-dots li button {
+    position: relative;
+    height: 16px;
+    width: 16px;
 }
 
-.slick-dots li.slick-active button:before {
-    color: $primary-color;
-    border-radius: 50%;
+.slick-dots li.slick-active button {
     border: $primary-color solid 1px;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button::before {
+    background-color: $primary-color;
+}
+
+.slick-dots li button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #a0a0a0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
 }

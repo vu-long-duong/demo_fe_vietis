@@ -1,7 +1,7 @@
 header {
     position: relative;
-    background-image: url('../../frontend/images/header_img_background.png');
-    height: 784px;
+    // background-image: url('../../frontend/images/header_img_background.png');
+    // height: 784px;
     @include background-cover;
 
     .header-top {
@@ -21,7 +21,7 @@ header {
                         position: relative;
                     }
     
-                    &__link {
+                    a {
                         display: block;
                         position: relative;
     
@@ -45,14 +45,6 @@ header {
                                 transform: scaleX(1);
                             }
                         }
-    
-                        &.header-top-pc-logo-nav__link--language{
-                            border-radius: $border-radius-m;
-                            padding: 8px;
-                            border: 1px solid rgba(69, 69, 69, 0.2);
-                            text-align: center;
-                            @include text16-regular;
-                        }
                     }
                 }
             }
@@ -62,79 +54,65 @@ header {
             display: none;
         }
     }
+}
 
-    .header-body {
-        margin-top: 70px;
+.header-top-pc-logo-nav__link--language {
+    border-radius: $border-radius-m;
+    padding: 8px;
+    border: 1px solid rgba(69, 69, 69, 0.2);
+    text-align: center;
+    display: block;
+    @include text16-regular;
+}
 
-        &__title {
-            color: $secondary-color;
-            max-width: 427px;
-            @include text60;
-            @include text-truncate(2);
-        }
+.banner {
+    position: relative;
+    // background-image: url('../../frontend/images/header_img_background.png');
+    // @include background-cover;
+}
 
-        &__describe {
-            display: block;
-            color: $text-color;
-            font-size: 20px;
-            font-weight: 400;
-            margin-top: 10px;
-            max-width: 427px;
-            @include text-truncate(1);
-        }
 
-        &-view {
-            display: flex;
-            gap: 16px;
-            margin-top: 70px;
-        }
+.banner-body {
+    margin-top: 70px;
 
-        &-inquiry {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            border-radius: $border-radius-xl;
-            border: 1px solid $primary-color;
-            background: $primary-color;
-            padding: 0 50px;
-
-            &__text {
-                color: $white-color;
-                text-align: center;
-                -webkit-text-stroke-width: 1;
-                -webkit-text-stroke-color: $primary-color;
-                @include text16-regular;
-            }
-        }
+    &__title {
+        color: $secondary-color;
+        max-width: 427px;
+        @include text60;
+        @include text-truncate(2);
     }
 
-    .header-bottom {
-        margin-top: 120px;
-        margin-left: 50%;
+    &__describe {
+        display: block;
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        max-width: 427px;
+        @include text-truncate(1);
+    }
 
-        &-achievement {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+    &-view {
+        display: inline-flex;
+        gap: 16px;
+        margin-top: 70px;
+    }
 
-            &-item {
-                padding: 5px;
-                border-radius: $border-radius-xl;
-                border: 1px solid #9FE2FF;
-            }
+    &-inquiry {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: $border-radius-xl;
+        border: 1px solid $primary-color;
+        background: $primary-color;
+        padding: 0 50px;
 
-            &__one,
-            &__two {
-                border-radius: $border-radius-xl;
-                background-color: $white-color;
-            }
-            &__one {
-                padding: 10px 20px;
-            }
-
-            &__two {
-                padding: 27px 10px;
-            }
+        &__text {
+            color: $white-color;
+            text-align: center;
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: $primary-color;
+            @include text16-regular;
         }
     }
 }

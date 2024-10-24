@@ -84,10 +84,34 @@ WEBS = (function () {
             }
         });
     }
+    
+    var ifameAction = function ()
+    {
+      document.querySelector('.banner-body-view__icon').addEventListener('click', function (event) {
+        event.preventDefault();
+    
+        const videoContainer = document.getElementById('banner-video');
+    
+        // Nhúng iframe vào thẻ video-container
+        videoContainer.innerHTML = `
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/Vj_5mYUQjzk" title="VIETIS President Sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `;
+        videoContainer.style.display = 'block';
+        
+        document.addEventListener('click', function closeVideo(event) {
+            if (!videoContainer.contains(event.target) && !event.target.closest('.banner-body-view__icon')) {
+                videoContainer.style.display = 'none';
+                videoContainer.innerHTML = '';
+                document.removeEventListener('click', closeVideo);
+            }
+        });
+      });
+    }
 
     return {
         _: function () {
             scrollHeader();
+            ifameAction();
             menuMobile();
             slideSlick(".slide-main-list , .leader-list");
             menuAccordion();

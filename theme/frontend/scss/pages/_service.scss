@@ -14,10 +14,11 @@
 
         &__text {
             display: block;
-            padding: 50px 0 70px;
+            margin: 50px 0 70px;
             color: $text-color;
             text-align: center;
             @include text16-regular;
+            @include text-truncate(4);
             width: 736px;
             align-self: center;
         }
@@ -97,17 +98,21 @@
             margin-top: 50px;
 
             &-item {
-                background-color: #EBF5FF;
+                background-color: #F3F4FD;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                flex: 1;
                 gap: 15px;
                 padding: 45px;
                 border-radius: 24px;
                 border: 1px solid $white-color;
 
-                &:hover {
+                &--colorEDFAFE {
                     background-color: #EDFAFE;
+                }
+                &--colorEBF5FF {
+                    background-color: #EBF5FF;
                 }
 
                 &__title {
@@ -120,6 +125,7 @@
                     color: $text-color;
                     text-align: center;
                     @include text16-regular;
+                    @include text-truncate(5);
                 }
             }
         }

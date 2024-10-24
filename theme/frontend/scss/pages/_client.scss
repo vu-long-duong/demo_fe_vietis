@@ -16,20 +16,32 @@
         row-gap: 18px;
 
         &-item {
+            height: 100%;
             width: 100%;
-            margin: auto;
             border-radius: 8px;
             border: #A9B5C9 solid 1px;
             padding: 20px 30px;
+            cursor: pointer;
+            display: flex;
 
             &__img {
+                margin: auto;
                 img {
-                    height: 65px;
+                    max-height: 65px;
                     object-fit: contain;
                     object-position: center;
+                    transition: transform 0.3s ease;
                 }
             }
-        }
+
+            &:hover .client-list-item__img img{
+                transform: scale(1.2);
+            }
+
+            &:hover {
+                border-color: $primary-color;
+            }
+        } 
     }
 }
 

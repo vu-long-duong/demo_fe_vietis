@@ -5,7 +5,6 @@
     &-top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         column-gap: 120px;
         row-gap: 50px;
 
@@ -31,8 +30,7 @@
             &-mail__text,
             &-phone__text {
                 color: $white-color;
-                font-weight: 700;
-                line-height: 20px;
+                @include text16-bold;
             }
         }
     }
@@ -41,8 +39,8 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        position: relative;
-        transform: translateY(-150%);
+        margin-top: 50px;
+        padding-bottom: 57px;
 
         &-icon {
             display: flex;
@@ -54,6 +52,7 @@
                 height: 45px;
                 border-radius: 50%;
                 border: $white-color solid 1px;
+                cursor: pointer;
             }
 
             &__fb {
@@ -69,7 +68,7 @@
             display: flex;
             gap: 30px;
 
-            &__item {
+            li a {
                 color: $white-color;
                 @include text16-bold;
             }

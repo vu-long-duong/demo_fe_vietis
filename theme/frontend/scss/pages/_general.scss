@@ -1,10 +1,17 @@
+.general-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 .general {
     position: relative;
-    top: -75px;
-    background-image: url("../../frontend/images/general_img_background.png");
-    height: 400px;
-    @include background-cover;
+    // padding: 107px 200px;
     @include flex-center;
+    height: auto;
 
     &-list {
         display: inline-flex;
