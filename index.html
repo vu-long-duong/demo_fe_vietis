@@ -16,66 +16,63 @@
     
     <!-- Custom css -->
     <link rel="stylesheet" href="./theme/frontend/css/style.css">
-    <style>
-        #banner-video {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0%;
-            right: 0;
-            display: none;
-        }
-
-        #banner-video-container iframe {
-            border-radius: 8px;
-            width: 100%;
-            height: auto;
-            width: auto;
-            max-width: 800px;
-            max-height: 450px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <div class="header-top-pc">
-                <div class="responsive">
-                    <div class="header-top-pc-logo">
-                        <a href="#" class="header-top-pc-logo__img">
-                            <img src="./theme/frontend/images/header_img_logo.png" alt="">
-                        </a>
-                        <ul class="header-top-pc-logo-nav">
-                            <li>
-                                <a href="#" class="">Home</a>
-                            </li>
-                            <li>
-                                <a href="#" class="">About us</a>
-                            </li>
-                            <li>
-                                <a href="#" class="">Service</a>
-                            </li>
-                            <li>
-                                <a href="#" class="">Products</a>
-                            </li>
-                            <li>
-                                <a href="#" class="">Blogs</a>
-                            </li>
-                            <li>
-                                <a href="#" class="">Case study</a>
-                            </li>
-                        </ul>
-                        <div class="dropdown header-top-pc-logo-language">
-                            <a href="#" class="header-top-pc-logo-nav__link--language">JP</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-menu__link">VI</a></li>
-                                <li><a href="#" class="dropdown-menu__link">EN</a></li>
+        <div class="header">
+            <div class="responsive">
+                <div class="header-logo">
+                    <div class="header-logo__menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <g clip-path="url(#clip0_1_4745)">
+                                <path d="M5 30H15V26.6667H5V30ZM5 10V13.3333H35V10H5ZM5 21.6667H25V18.3333H5V21.6667Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_4745">
+                                <rect width="40" height="40" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <a href="#" class="header-logo__img">
+                        <img src="./theme/frontend/images/header_img_logo.png" alt="">
+                    </a>
+                    <ul class="header-logo-nav">
+                        <li>
+                            <a href="#" class="">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="">About us</a>
+                            <ul>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Our Story</a></li>
+                                <li><a href="#">Our Mission</a></li>
                             </ul>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="#" class="">Service</a>
+                        </li>
+                        <li>
+                            <a href="#" class="">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="">Blogs</a>
+                        </li>
+                        <li>
+                            <a href="#" class="">Case study</a>
+                        </li>
+                    </ul>
+                    <div class="header-logo-language">
+                        <a href="#">JP</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-menu__link">VI</a></li>
+                            <li><a href="#" class="dropdown-menu__link">EN</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="header-top-mobile">
+
+            <!-- <div class="header-top-mobile">
                 <div class="responsive">
                     <div class="header-top-mobile-head">
                         <div class="header-top-mobile-head__menu">
@@ -201,11 +198,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </header>
 
     <div class="banner">
+        <div class="banner-background">
+            <img src="./theme/frontend/images/header_img_background.png" alt="">
+        </div>
         <div class="responsive">
             <div class="banner-body">
                 <h1 class="banner-body__title">
@@ -220,7 +220,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36ZM13.5 25.7942L27 18L13.5 10.2058L13.5 25.7942Z" fill="#FC7561"/>
                         </svg>
                     </a>
-                    <div class="banner-body-inquiry">
+                    <a href="#" class="banner-body-inquiry">
                         <div class="banner-body-inquiry__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clip-path="url(#clip0_314_2178)">
@@ -235,7 +235,7 @@
                             </svg>
                         </div>
                         <span class="banner-body-inquiry__text">Inquiry</span>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div id="banner-video"></div>

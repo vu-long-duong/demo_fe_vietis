@@ -1,49 +1,49 @@
 header {
-    position: relative;
-    // background-image: url('../../frontend/images/header_img_background.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
     // height: 784px;
-    @include background-cover;
 
-    .header-top {
-        &-pc {
-            &-logo {
-                display: flex;
-                justify-content: space-between;
-                padding: 40px 0;
-                &-nav {
-                    display: inline-flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    gap: 30px;
-                    margin-left: auto;
-    
-                    li {
-                        position: relative;
+    .header {
+        &-logo {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            &-nav {
+                display: inline-flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 30px;
+                margin-left: auto;
+
+                li {
+                    position: relative;
+                }
+
+                a {
+                    display: block;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -10px;
+                        height: 2px;
+                        width: 100%;
+                        background-color: $primary-color;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform 0.3s ease;
                     }
-    
-                    a {
-                        display: block;
-                        position: relative;
-    
+
+                    &:hover {
+                        font-weight: 700;
+
                         &::after {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            bottom: -10px;
-                            height: 2px;
-                            width: 100%;
-                            background-color: $primary-color;
-                            transform: scaleX(0);
-                            transform-origin: left;
-                            transition: transform 0.3s ease;
-                        }
-    
-                        &:hover {
-                            font-weight: 700;
-    
-                            &::after {
-                                transform: scaleX(1);
-                            }
+                            transform: scaleX(1);
                         }
                     }
                 }
@@ -56,23 +56,78 @@ header {
     }
 }
 
-.header-top-pc-logo-nav__link--language {
-    border-radius: $border-radius-m;
-    padding: 8px;
-    border: 1px solid rgba(69, 69, 69, 0.2);
-    text-align: center;
+.header-logo-nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $white-color;
+    list-style: none;
+}
+
+.header-logo-nav li ul li a {
+    min-width: 90px;
+    margin: 10px;
+}
+
+.header-logo-nav li:hover ul {
     display: block;
-    @include text16-regular;
 }
 
 .banner {
     position: relative;
-    // background-image: url('../../frontend/images/header_img_background.png');
-    // @include background-cover;
 }
 
+.banner-background img {
+    width: 100%;
+    height: auto;
+}
+
+#banner-video {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: auto;
+    width: auto;
+    display: none;
+}
+
+.banner-firework {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 0;
+    background-color: rgba(0, 142, 204, 0.5);
+    border-radius: 2px;
+    animation: shoot 2s forwards;
+}
+
+.banner-firework::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 142, 204, 0.5);
+    border-radius: 50%;
+}
+
+@keyframes shoot {
+    0% {
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        height: 20%;
+        opacity: 0;
+    }
+}
 
 .banner-body {
+    position: absolute;
+    top: 190px;
     margin-top: 70px;
 
     &__title {
@@ -127,11 +182,20 @@ header {
     z-index: 9999;
 }
 
-.dropdown {
+.header-logo-language {
     position: relative;
     margin-left: 30px;
 
-    .dropdown-menu {
+    a {
+        border-radius: $border-radius-m;
+        padding: 8px;
+        border: 1px solid rgba(69, 69, 69, 0.2);
+        text-align: center;
+        display: block;
+        @include text16-regular;
+    }
+
+    ul {
         display: none;
         position: absolute;
         top: 100%;
@@ -140,7 +204,7 @@ header {
         padding: 0;
         margin: 0;
 
-        &__link {
+        a {
             display: block;
             border-radius: $border-radius-m;
             padding: 8px;
@@ -154,7 +218,7 @@ header {
         }
     }
 
-    &:hover .dropdown-menu {
+    &:hover ul {
         display: block;
     }
 }
@@ -182,35 +246,63 @@ header {
 
 @media screen and (max-width: 756px) {
     header {
-        background: none;
-        height: 670px;
+        // height: 670px;
 
-        .header-top-pc {
+        .header-logo-nav {
             display: none;
         }
 
-        .header-top-mobile {
+        .header-logo__menu {
             display: block;
         }
 
         .header-body__title {
             width: auto;
         }
-
-        .header-bottom {
-            margin-top: 80px;
-            margin-left: 0;
-
-            .header-bottom-achievement {
-                gap: 0;
-                justify-content: space-evenly;
-            }
-        }
     }
 
-.header-top-mobile {
+.header {
     background-color: #2F5AA8;
 }
+
+.header-logo__img {
+    filter: brightness(10);
+}
+
+.header-logo-language {
+    margin-left: 0;
+}
+
+.header-logo-language a {
+    border-color: $white-color;
+    color: $white-color;
+}
+
+.banner {
+    padding: 40px;
+}
+
+.banner,
+.banner-body,
+#banner-video {
+    position: unset;
+}
+
+.banner-background {
+    display: none;
+}
+
+.banner-body__title {
+    @include middum-40;
+}
+
+#banner-video {
+    margin-top: 20px;
+}
+
+
+
+
 
 .header-top-mobile-head {
     display: flex;

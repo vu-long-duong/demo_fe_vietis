@@ -49,6 +49,19 @@ WEBS = (function () {
             mobileGroup.classList.remove('header-top-mobile-group-active');
         });
     }
+  
+    var firework = function ()
+    {
+      const banner = document.querySelector('.banner');
+      const firework = document.createElement('div');
+      firework.className = 'banner-firework';
+      firework.style.left = Math.random() * 100 + '%';
+      banner.appendChild(firework);
+
+      setTimeout(() => {
+          banner.removeChild(firework);
+      }, 2000);
+    }
 
     var slideSlick = function ( className )
     {
@@ -92,29 +105,30 @@ WEBS = (function () {
     
         const videoContainer = document.getElementById('banner-video');
     
-        // Nhúng iframe vào thẻ video-container
         videoContainer.innerHTML = `
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/Vj_5mYUQjzk" title="VIETIS President Sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/Vj_5mYUQjzk" title="VIETIS President Sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
         videoContainer.style.display = 'block';
         
         document.addEventListener('click', function closeVideo(event) {
-            if (!videoContainer.contains(event.target) && !event.target.closest('.banner-body-view__icon')) {
-                videoContainer.style.display = 'none';
-                videoContainer.innerHTML = '';
-                document.removeEventListener('click', closeVideo);
-            }
+          if ( !videoContainer.contains( event.target ) && !event.target.closest( '.banner-body-view__icon' ) )
+          {
+            videoContainer.style.display = 'none';
+            videoContainer.innerHTML = '';
+            document.removeEventListener('click', closeVideo);
+          }
         });
       });
     }
 
     return {
         _: function () {
-            scrollHeader();
+            // scrollHeader();
             ifameAction();
             menuMobile();
             slideSlick(".slide-main-list , .leader-list");
             menuAccordion();
+            setInterval(firework, 2000);
         }
     };
 })();

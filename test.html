@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            background-color: #e6f2ff;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #87cefa;
+            overflow: hidden;
+        }
+
+        .banner-firework {
+            position: absolute;
+            bottom: 0;
+            width: 2px;
+            height: 0;
+            background-color: rgba(0, 142, 204, 0.7);
+            border-radius: 1px;
+            animation: shoot 2s forwards;
+        }
+
+        .banner-firework::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: rgba(0, 142, 204, 0.7);
+            border-radius: 50%;
+        }
+
+        @keyframes shoot {
+            0% {
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                height: 80%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <!-- Nội dung banner -->
+</div>
+
+<script>
+    function firework() {
+        var banner = document.querySelector('.banner');
+        var firework = document.createElement('div');
+        firework.className = 'banner-firework';
+        firework.style.left = Math.random() * 100 + '%';
+        banner.appendChild(firework);
+
+        setTimeout(function() {
+            banner.removeChild(firework);
+        }, 2000);
+    }
+
+    function initialize() {
+        setInterval(firework, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        initialize();
+    });
+</script>
+
+</body>
+</html>
