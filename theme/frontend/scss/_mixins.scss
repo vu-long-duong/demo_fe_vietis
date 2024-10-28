@@ -26,12 +26,14 @@
 
 // text16-reglar
 @mixin text16-regular {
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.25;
 }
 
 // text16-bold 
 @mixin text16-bold {
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.25;
 }

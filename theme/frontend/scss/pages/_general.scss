@@ -1,60 +1,67 @@
 .general-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+}
+
+.general-bg img {
     width: 100%;
     object-fit: cover;
-    z-index: -1;
 }
 
 .general {
     position: relative;
-    // padding: 107px 200px;
-    @include flex-center;
+    margin-top: -100px;
     height: auto;
-
-    &-list {
-        display: inline-flex;
-        align-items: center;
-        gap: 120px;
-
-        &-item {
-            display: flex;
-            flex-direction: column;
+    
+    &-content {
+        // padding: 107px 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        @include flex-center;
+        &-list {
+            display: inline-flex;
             align-items: center;
-
-            &__number {
-                text-align: center;
-                @include lagre-80;
-            }
-
-            &__text {
-                color: $white-color;
-                text-align: center;
-                @include h2;
+            gap: 120px;
+    
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                &__number {
+                    text-align: center;
+                    @include lagre-80;
+                }
+    
+                &__text {
+                    color: $white-color;
+                    text-align: center;
+                    @include h2;
+                }
             }
         }
     }
 }
 
 @media (max-width: 1024px) and (min-width: 756px) {
-    .general {
-        height: 300px;
-    }
+
 }
 
 @media screen and (max-width: 756px) {
     .general {
-        height: 200px;
+        margin-top: 0;
         background-image: none;
         background-color: $primary-color;
 
-        &-list {
-            gap: 60px;
-
-            &-item {
-                &__number {
-                    font-size: 30px;
+        &-content {
+            &-list {
+                gap: 60px;
+    
+                &-item {
+                    &__number {
+                        font-size: 30px;
+                    }
                 }
             }
         }

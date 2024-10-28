@@ -136,46 +136,66 @@
     
 // }
 
-// @media screen and (max-width: 756px) {
-   
-// }
-
-
     .technology-list {
         display: flex;
-    }
-
-    .technology-list:nth-child(odd) {
+        background-color: #eceff4;
     }
     
     .technology-list:nth-child(even) {
         flex-direction: row-reverse;
+        background-color: #e7eaef;
     }
 
     .technology-list:nth-child(odd) .technology-list-item:nth-child(odd) {
         background-color: #358BDB;
-        padding-left: 130px;
         padding-right: 52px;
     }
 
     .technology-list:nth-child(even) .technology-list-item:nth-child(odd) {
         padding-left: 56px;
-        padding-right: 130px;
-        background-color: #01B9EA; /* Màu nền cho các phần tử chẵn */
+        background-color: #01B9EA;
+    }
+
+    .technology-list:nth-child(odd) .technology-list-item:nth-child(odd) .technology-list-item-main {
+        margin-left: auto;
+    }
+    .technology-list:nth-child(odd) .technology-list-item:nth-child(even) .technology-list-item__img {
+        height: 100%;
+        margin-right: auto;
+    }
+
+    .technology-list:nth-child(even) .technology-list-item:nth-child(odd) .technology-list-item-main {
+        margin-right: auto;
+    }
+
+    .technology-list:nth-child(even) .technology-list-item:nth-child(even) .technology-list-item__img { 
+        height: 100%;
+        margin-left: auto;
     }
 
     .technology-list-item {
         width: 50%;
     }
+
+    .technology-list-item__img {
+        max-width: 660px;
+    }
+
     .technology-list-item img {
         height: 100%;
         object-fit: contain;
         object-position: center;
     }
     
+    .technology-list-item__img img {
+        object-fit: cover;
+    }
+
     .technology-list-item-main {
         padding: 70px 0 50px;
+        max-width: 509px;
     }
+
     .technology-list-item-main__title {
     color: #FFFFFF;
     font-size: 40px;
@@ -240,3 +260,27 @@
     overflow: hidden;
     text-overflow: ellipsis;
     }
+
+@media screen and (max-width: 756px) {
+
+    .technology-list {
+        display: block;
+    }
+
+    .technology-list-item {
+        width: 100%;
+    }
+
+    .technology-list-item-main {
+        padding: 30px 0 20px;
+    }
+
+    .technology-list-item-main__title {
+       @include h2;
+    }
+
+    .technology-list:nth-child(odd) .technology-list-item:nth-child(odd),
+    .technology-list:nth-child(even) .technology-list-item:nth-child(odd) {
+        padding: 0 10px;
+    }
+}

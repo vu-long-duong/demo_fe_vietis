@@ -44,7 +44,6 @@
         }
 
         &-main {
-            min-height: 715px;
             flex-basis: 58%;
             position: relative;
             border-radius: 8px;
@@ -83,7 +82,7 @@
                             }
 
                             & .introduce-outsource-main-list-item-body__text {
-                                max-height: 150px;
+                                max-height: 160px;
                             }
 
                             & .introduce-outsource-main-list-item-top {
@@ -149,15 +148,19 @@
         }
 
         &-call {
-            border-radius: 21px;
-            border: 1px solid $white-color;
-
             &__text {
                 display: block;
                 padding: 10px 30px;
                 color: $white-color;
                 text-align: center;
+                border-radius: 21px;
+                border: 1px solid $white-color;
                 @include text16-regular;
+
+                &:hover {
+                    background-color: #F6F6FF;
+                    color: $primary-color;
+                }
             }
         }
     }
@@ -185,6 +188,7 @@
         &-develop {
             flex-wrap: wrap;
             gap: 20px;
+            flex-direction: column-reverse;
         }
 
         &-outsource {
@@ -194,6 +198,7 @@
             &-main {
                 margin: 20px 0 0;
                 padding: 20px 30px;
+                min-height: unset;
             }
         }
 

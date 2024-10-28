@@ -13,37 +13,32 @@
         width: 100%;
 
         &-item {
-            display: flex !important;
-            justify-content: space-between;
-            width: initial;
 
-            &-group {
-                &__img {
-                    padding: 20px 20px 0;
-                    border: 1px solid $white-color;
-                    background: #E0ECF9;
-                    border-radius: 0 0 0 30px;
+            &__img {
+                padding: 20px 20px 0;
+                border: 1px solid $white-color;
+                background: #E0ECF9;
+                border-radius: 0 0 0 30px;
 
-                    img {
-                        object-fit: contain;
-                        object-position: center;
-                    }
+                img {
+                    object-fit: contain;
+                    object-position: center;
                 }
+            }
 
-                &__name {
-                    margin: 20px 0 10px;
-                    color: $text-color;
-                    text-align: center;
-                    @include h2;
-                    @include text-truncate(1);
-                }
+            &__name {
+                margin: 20px 0 10px;
+                color: $text-color;
+                text-align: center;
+                @include h2;
+                @include text-truncate(1);
+            }
 
-                &__describe {
-                    display: block;
-                    color: #828282;
-                    text-align: center;
-                    @include text16-regular;
-                }
+            &__describe {
+                display: block;
+                color: #828282;
+                text-align: center;
+                @include text16-regular;
             }
         }
     }
