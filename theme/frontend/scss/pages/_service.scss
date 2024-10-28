@@ -133,18 +133,19 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 756px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     .service-why-list-item {
         padding: 15px;
     }
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 768px) {
     .service {
         padding-top: 100px;
 
         &-top__text {
             width: auto;
+            margin: 20px 0 30px;
         }
 
         &-list {
