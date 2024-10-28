@@ -91,9 +91,9 @@ header {
     margin: 10px;
 }
 
-// .header-content-group-nav li:hover ul {
-//     display: block;
-// }
+.header-content-group-nav li:hover ul {
+    display: block;
+}
 
 .banner {
     position: relative;
@@ -434,6 +434,10 @@ header {
     }
 }
 
+.fixed ul li ul li a {
+    color: $white-color;
+}
+
 .banner {
     padding: 40px 0;
     position: unset;
@@ -442,12 +446,32 @@ header {
       display: none;
     }
   
-    .banner-body {
+    &-body {
       position: unset;
   
       &__title {
         @include middum-40;
       }
+    }
+
+    &-modal {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        &-content {
+            background-color: #ccc;
+            margin: 15% auto;
+            padding: 5px;
+            border: 1px solid #888;
+            width: 80%;
+        }
     }
 }
 

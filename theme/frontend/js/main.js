@@ -109,7 +109,6 @@ WEBS = (function () {
           }
         });
       }
-    
   }
   
   var runNumber = function () {
@@ -209,31 +208,27 @@ WEBS = (function () {
     
   var ifameAction = function ()
   {
-    document.querySelector('.banner-body-view__icon').addEventListener('click', function (event) {
-      event.preventDefault();
-  
-      var videoContainer = document.getElementById('banner-video');
-  
-      videoContainer.innerHTML = `
-          <iframe width="auto" height="auto" src="https://www.youtube.com/embed/Vj_5mYUQjzk" title="VIETIS President Sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      `;
-      videoContainer.style.display = 'block';
-      
-      document.addEventListener('click', function closeVideo(event) {
-        if ( !videoContainer.contains( event.target ) && !event.target.closest( '.banner-body-view__icon' ) )
-        {
-          videoContainer.style.display = 'none';
-          videoContainer.innerHTML = '';
-          document.removeEventListener('click', closeVideo);
-        }
-      });
+    var modal = document.querySelector(".banner-modal");
+    var btn = document.querySelector( ".banner-body-view__icon" );
+    
+    console.log(modal)
+
+    btn.addEventListener("click", function(event) {
+        event.preventDefault();
+        modal.style.display = "block";
     });
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
   }
 
   return {
     _: function () {
         scrollHeader();
-        // ifameAction();
+        ifameAction();
         menuMobile();
         slideSlick(".slide-main-list , .leader-list");
         menuAccordion();
