@@ -1,4 +1,6 @@
-WEBS = (function () {
+WEBS = ( function ()
+{
+  
 
   var menuAccordion = function () {
         var previousElement = null;
@@ -77,18 +79,19 @@ WEBS = (function () {
       } );
     
     // nav
-    var headerLogoNav = document.querySelector('.header-content-group-nav');
-    var listItems = headerLogoNav.querySelectorAll( 'li:has(ul)' );
+    var headerLogoNavs = document.querySelectorAll( '.header-content-group-nav-wrap' );
 
     var previousElement = null;
-      if (listItems.length <= 0) {
+      if (headerLogoNavs.length <= 0) {
         return;
       }
   
-      for (var i = 0; i < listItems.length; i++) {
-          listItems[i].addEventListener( "click", function ()
+    for ( var i = 0; i < headerLogoNavs.length; i++ ) {
+          headerLogoNavs[i].addEventListener( "click", function ()
           {
-          var parentAccItemHeader = this.parentElement;
+            var parentAccItemHeader = this.parentElement;
+            
+            console.log(parentAccItemHeader)
   
           if (parentAccItemHeader) {
             parentAccItemHeader.classList.toggle(
@@ -210,8 +213,6 @@ WEBS = (function () {
   {
     var modal = document.querySelector(".banner-modal");
     var btn = document.querySelector( ".banner-body-view__icon" );
-    
-    console.log(modal)
 
     btn.addEventListener("click", function(event) {
         event.preventDefault();
@@ -238,6 +239,7 @@ WEBS = (function () {
   };
 })();
 
-document.addEventListener("DOMContentLoaded", function () {
-    WEBS._();
+document.addEventListener( "DOMContentLoaded", function () {
+  new WOW().init();
+  WEBS._();
 });

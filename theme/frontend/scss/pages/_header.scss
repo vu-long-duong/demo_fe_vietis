@@ -91,10 +91,6 @@ header {
     margin: 10px;
 }
 
-.header-content-group-nav li:hover ul {
-    display: block;
-}
-
 .banner {
     position: relative;
 }
@@ -109,6 +105,26 @@ header {
     bottom: 0;
     animation: fly 3s ease-in-out infinite;
     opacity: 0;
+}
+
+.banner-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
 @keyframes fly {
@@ -191,6 +207,10 @@ header {
     ul {
       li {
         padding: 10px;
+
+        a::after {
+            background-color: $text-color;
+        }
   
         ul {
           border-radius: $border-radius-m;
@@ -205,7 +225,6 @@ header {
       }
     }
 }
-  
 
 .header-logo-language {
     position: relative;
@@ -248,6 +267,12 @@ header {
     }
 
     &:hover ul {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-content-group-nav li:hover ul {
         display: block;
     }
 }
@@ -322,19 +347,21 @@ header {
                     max-height: 375px;
     
                     ul {
+                        display: block;
+                        opacity: 0;
                         max-height: 0;
-                        display: none;
                     }
     
                     &--active {
                         ul {
                             background-color: #2F5AA8;
-                            display: block;
                             position: unset;
-                            max-height: none;
+                            opacity: 1;
+                            max-height: 300px;
     
                             li {
-                            padding: 0;
+                                padding: 0;
+                                line-height: 50px;
                             }
                         }
     
@@ -367,9 +394,9 @@ header {
                         }
                     }
     
-                    &.header-content-group-nav--active li {
-                        min-height: unset;
-                    }
+                    // &.header-content-group-nav--active li {
+                    //     min-height: unset;
+                    // }
 
                     &-wrap {
                         display: flex;
@@ -434,6 +461,15 @@ header {
     }
 }
 
+.header-content-group-nav--active ul {
+    display:block;
+}
+
+.fixed ul li ul {
+    box-shadow: none;
+    border-radius: unset;
+}
+
 .fixed ul li ul li a {
     color: $white-color;
 }
@@ -452,26 +488,6 @@ header {
       &__title {
         @include middum-40;
       }
-    }
-
-    &-modal {
-        display: none;
-        position: fixed;
-        z-index: 10;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.4);
-
-        &-content {
-            background-color: #ccc;
-            margin: 15% auto;
-            padding: 5px;
-            border: 1px solid #888;
-            width: 80%;
-        }
     }
 }
 
