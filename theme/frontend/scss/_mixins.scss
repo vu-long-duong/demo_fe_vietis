@@ -69,3 +69,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@mixin underline($color:#FFF, $offset: 5px) {
+    text-decoration: underline;
+    text-underline-offset: $offset;
+    text-decoration-color: $color;
+}

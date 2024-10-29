@@ -129,6 +129,7 @@
         }
 
         .technology-list-item-main-support__text {
+            display: block;
             margin-top: 10px;
             color: #FFFFFF;
             font-weight: 400;
@@ -138,6 +139,11 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            &:hover {
+                @include underline();
+                text-underline-offset:unset
+            }
         }
     }
 }
@@ -165,8 +171,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .technology-list {
-        display: block;
+    .technology {
+        .technology-list {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     .technology-list-item {

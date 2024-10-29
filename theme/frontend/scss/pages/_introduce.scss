@@ -21,15 +21,15 @@
                 color: $primary-color;
                 @include text-truncate(2);
             }
-        }
-    
-        &-body {
-            margin-top: 50px;
-    
-            &__text {
-                color: $text-color;
-                @include text16-regular;
-                @include text-truncate(5);
+
+            &-body {
+                margin-top: 50px;
+        
+                &__text {
+                    color: $text-color;
+                    @include text16-regular;
+                    @include text-truncate(5);
+                }
             }
         }
     }
@@ -38,7 +38,7 @@
 .outsource {
     &-group {
         display: flex;
-        margin: 120px 0 200px;
+        margin: 120px 0 40px;
 
         &__img {
             flex-basis: 58%;
@@ -65,6 +65,22 @@
                 margin-top: 50px;
     
                 &-item {
+                    
+                    &--active {
+    
+                        & .outsource-group-main-list-item-top__icon {
+                            transform: rotate(180deg);
+                        }
+
+                        & .outsource-group-main-list-item-body__text {
+                            max-height: 180px;
+                        }
+
+                        & .outsource-group-main-list-item-top {
+                            background: $primary-color;
+                        }
+                    }
+
                     &-top {
                         display: flex;
                         justify-content: space-between;
@@ -75,21 +91,6 @@
     
                         &__icon{
                             display: flex;
-                        }
-    
-                        &--active {
-    
-                            & .outsource-group-main-list-item-top__icon {
-                                transform: rotate(180deg);
-                            }
-    
-                            & .outsource-group-main-list-item-body__text {
-                                max-height: 180px;
-                            }
-    
-                            & .outsource-group-main-list-item-top {
-                                background: $primary-color;
-                            }
                         }
     
                         &__title {
@@ -209,6 +210,7 @@
 
         &__title {
             text-align: center;
+            margin: auto;
         }
 
         &-call {
