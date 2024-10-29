@@ -7,7 +7,7 @@
 // lagre-80
 @mixin lagre-80 {
     -webkit-text-stroke: 1px #FFF;
-    color: #01B9EA;
+    color: transparent;
     font-size: 80px;
     font-weight: 700;
 }
@@ -26,14 +26,16 @@
 
 // text16-reglar
 @mixin text16-regular {
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.25;
 }
 
 // text16-bold 
 @mixin text16-bold {
+    font-size: 1.6rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25;
 }
 
 // h2
@@ -46,6 +48,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@mixin background-contain {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 @mixin object-cover {

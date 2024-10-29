@@ -1,5 +1,5 @@
 .introduce {
-    margin-top: 50px;
+    margin-top: 110px;
 
     &-develop {
         display: flex;
@@ -19,7 +19,7 @@
 
             &__title--hightlight {
                 color: $primary-color;
-                @include text-truncate(1);
+                @include text-truncate(2);
             }
         }
 
@@ -44,13 +44,12 @@
         }
 
         &-main {
-            height: 715px;
             flex-basis: 58%;
             position: relative;
             border-radius: 8px;
             background: #358BDB;
             color: $white-color;
-            padding: 60px 70px;
+            padding: 60px 70px 20px;
             box-sizing: border-box;
             margin: 60px 0 0 -160px;
             z-index: 1;
@@ -72,6 +71,10 @@
                         background: #439EF2;
                         cursor: pointer;
 
+                        &__icon{
+                            display: flex;
+                        }
+
                         &--active {
 
                             & .introduce-outsource-main-list-item-top__icon {
@@ -79,7 +82,7 @@
                             }
 
                             & .introduce-outsource-main-list-item-body__text {
-                                max-height: 150px;
+                                max-height: 180px;
                             }
 
                             & .introduce-outsource-main-list-item-top {
@@ -101,9 +104,7 @@
                             color: $white-color;
                             @include text16-regular;
                             overflow-y: auto;
-                            line-height: 2.4rem;
                             max-height: 0px;
-                            transition: all 0.3s;
 
                             &::-webkit-scrollbar {
                                 width: 8px;
@@ -133,6 +134,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 1120px;
         border-radius: 8px;
         padding: 55px 60px;
         background-image: url("../../frontend/images/introduce_img_background_meeting.png");
@@ -145,23 +147,27 @@
         }
 
         &-call {
-            border-radius: 21px;
-            border: 1px solid $white-color;
-
             &__text {
                 display: block;
                 padding: 10px 30px;
                 color: $white-color;
                 text-align: center;
+                border-radius: 21px;
+                border: 1px solid $white-color;
                 @include text16-regular;
+
+                &:hover {
+                    background-color: #F6F6FF;
+                    color: $primary-color;
+                }
             }
         }
     }
 }
 
-@media (max-width: 1024px) and (min-width: 756px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     .introduce-metting {
-        width: auto;
+        position: unset;
     }
 
     .introduce-outsource {
@@ -174,13 +180,13 @@
     }
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 768px) {
     .introduce {
-        margin: 0;
 
         &-develop {
             flex-wrap: wrap;
             gap: 20px;
+            flex-direction: column-reverse;
         }
 
         &-outsource {
@@ -190,6 +196,7 @@
             &-main {
                 margin: 20px 0 0;
                 padding: 20px 30px;
+                min-height: unset;
             }
         }
 

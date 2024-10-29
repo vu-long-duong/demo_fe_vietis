@@ -1,53 +1,72 @@
+.general-bg {
+    width: 100%;
+}
+
+.general-bg img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .general {
     position: relative;
-    top: -75px;
-    background-image: url("../../frontend/images/general_img_background.png");
-    height: 400px;
-    @include background-cover;
-    @include flex-center;
-
-    &-list {
-        display: inline-flex;
-        align-items: center;
-        gap: 120px;
-
-        &-item {
-            display: flex;
-            flex-direction: column;
+    margin-top: -100px;
+    height: auto;
+    
+    &-content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        @include flex-center;
+        &-list {
+            display: inline-flex;
             align-items: center;
-
-            &__number {
-                text-align: center;
-                @include lagre-80;
-            }
-
-            &__text {
-                color: $white-color;
-                text-align: center;
-                @include h2;
+            gap: 120px;
+    
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                &__number {
+                    text-align: center;
+                    @include lagre-80;
+                }
+    
+                &__text {
+                    color: $white-color;
+                    text-align: center;
+                    @include h2;
+                }
             }
         }
     }
 }
 
-@media (max-width: 1024px) and (min-width: 756px) {
+@media (max-width: 1024px) and (min-width: 769px) {
     .general {
-        height: 300px;
+        margin-top: -50px;
+    }
+
+    .banner-body {
+        margin-top: 0;
     }
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 768px) {
     .general {
-        height: 200px;
+        margin-top: 0;
         background-image: none;
         background-color: $primary-color;
 
-        &-list {
-            gap: 60px;
-
-            &-item {
-                &__number {
-                    font-size: 30px;
+        &-content {
+            &-list {
+                gap: 60px;
+    
+                &-item {
+                    &__number {
+                        font-size: 30px;
+                    }
                 }
             }
         }
