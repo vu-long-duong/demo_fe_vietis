@@ -74,7 +74,7 @@ WEBS = ( function ()
 
   var menuMobile = function () {
       var btnMenu = document.querySelector('.header-main__menu');
-      var btnClose = document.querySelector('.header-main-content-group__close');
+      var btnClose = document.querySelector('.header-main-content__close');
       var wrapper = document.querySelector('.wrapper');
       var wrapperGroup = document.querySelector('.header-main-content-group');
 

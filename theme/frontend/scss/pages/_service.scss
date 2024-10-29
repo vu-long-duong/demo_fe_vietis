@@ -144,8 +144,14 @@
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
+    .service-why-list {
+        flex-wrap: wrap;
+    }
+    
     .service-why-list-item {
         padding: 15px;
+        width: calc(50% - 24px);
+        flex: none;
     }
 }
 
@@ -170,7 +176,7 @@
 
             &-list {
                 flex-wrap: wrap;
-                
+
                 &-item {
                     flex: auto;
                 }
