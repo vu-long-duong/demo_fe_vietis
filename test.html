@@ -1,84 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modal with YouTube Video</title>
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Icon Example</title>
+    <style>
+        .service-why-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
+        .service-why-list-item {
+            text-align: center;
+            margin: 0 20px;
+            transition: transform .5s ease-in-out;
+        }
 
-    .close-button {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
+        .service-why-list-item:hover .service-why-list-item__icon svg {
+            transform: rotateX(360deg);
+        }
 
-    .close-button:hover,
-    .close-button:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
+        .service-why-list-item__icon svg {
+            width: 60px;
+            height: 60px;
+            fill: #2196F3;
+        }
+
+        .service-why-list-item__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .service-why-list-item__text {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-  <button id="openModal">Xem video</button>
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <iframe
-              width="100%"
-              height="515"
-              src="https://www.youtube.com/embed/xgeHpBAYR48?si=fKTr_XtHMujpirAn"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+    <div class="service-why-list">
+        <div class="service-why-list-item">
+            <div class="service-why-list-item__icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 7.79 14.21 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z"/>
+                </svg>
+            </div>
+            <div class="service-why-list-item__title">Certified technical staff</div>
+            <div class="service-why-list-item__text">Highly selected vendors from our rapidly expanding vendor ecosystem</div>
+        </div>
     </div>
-  </div>
-
-  <script>
-    const modal = document.querySelector("modal");
-    const btn = document.querySelector("openModal");
-    const span = document.querySelector("close-button")[0];
-    console.log(123123)
-
-    btn.addEventListener("click", function(event) {
-        event.preventDefault();
-        modal.style.display = "block";
-    });
-
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
 </body>
 </html>
