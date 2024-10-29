@@ -75,6 +75,10 @@
             li a {
                 color: $white-color;
                 @include text16-bold;
+
+                &:hover {
+                    @include underline;
+                }
             }
         }
     }
