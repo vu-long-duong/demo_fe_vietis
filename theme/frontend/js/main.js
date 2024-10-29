@@ -1,7 +1,5 @@
 WEBS = ( function ()
 {
-  
-
   var menuAccordion = function () {
         var previousElement = null;
         var accItemHeaders = document.querySelectorAll(
@@ -19,7 +17,7 @@ WEBS = ( function ()
     
             if (parentAccItemHeader) {
               parentAccItemHeader.classList.toggle(
-                "outsource-group-main-list-item-top--active"
+                "outsource-group-main-list-item--active"
               );
     
               if (previousElement === this) {
@@ -28,7 +26,7 @@ WEBS = ( function ()
     
               if (previousElement) {
                 previousElement.parentElement.classList.remove(
-                  "outsource-group-main-list-item-top--active"
+                  "outsource-group-main-list-item--active"
                 );
               }
     

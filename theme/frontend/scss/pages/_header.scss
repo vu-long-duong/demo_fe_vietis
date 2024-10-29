@@ -334,12 +334,14 @@ header {
                         margin: 0;
                         overflow-y: auto;
                         overflow-x: hidden;
-                        max-height: 575px;
         
                         ul {
                             display: block;
                             opacity: 0;
                             max-height: 0;
+                        }
+                        &::-webkit-scrollbar {
+                            display: none;
                         }
         
                         &--active {
@@ -357,6 +359,10 @@ header {
                                 li {
                                     padding: 0;
                                     line-height: 50px;
+                                }
+
+                                &::-webkit-scrollbar {
+                                    display: none;
                                 }
                             }
         

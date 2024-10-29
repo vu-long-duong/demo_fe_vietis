@@ -81,6 +81,13 @@
             &-list {
                 width: 100%;
             }
+
+            &__img {
+                display: flex;
+                img {
+                    margin: auto;
+                }
+            }
         }
 
         .slide-main-list-item__title {

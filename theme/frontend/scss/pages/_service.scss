@@ -170,6 +170,10 @@
 
             &-list {
                 flex-wrap: wrap;
+                
+                &-item {
+                    flex: auto;
+                }
             }
         }
     }
