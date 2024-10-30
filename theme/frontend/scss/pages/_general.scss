@@ -27,6 +27,7 @@
                 &__number {
                     text-align: center;
                     @include lagre-80;
+                    line-height: 70px;
                 }
     
                 &__text {
@@ -41,11 +42,15 @@
 
 @media (max-width: 1024px) and (min-width: 768px) {
     .general {
-        margin-top: -50px;
+        margin-top: -20px;
     }
 
-    .banner-body {
-        margin-top: 0;
+    .general-content-list-item__number {
+        @include text60;
+    }
+
+    .general-content-list-item__text {
+        @include text16-bold;
     }
 }
 
