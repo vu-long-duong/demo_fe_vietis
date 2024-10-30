@@ -210,7 +210,7 @@ WEBS = ( function ()
     });
   }
 
-  var scrollHeader = function() {
+  var scrollHeader = function () {
       var header = document.querySelector('header');
       var headerHeight = header.offsetHeight;
       var isFixed = false;
@@ -223,6 +223,27 @@ WEBS = ( function ()
               header.classList.toggle('header--fixed', isFixed);
           }
       });
+  }
+
+  var scrollTop = function () {
+    window.onscroll = function() {
+        var scrollToTop = document.getElementById("scrollToTop");
+        var banner = document.querySelector(".banner");
+        var bannerHeight = banner.offsetHeight;
+
+        if (document.documentElement.scrollTop > bannerHeight) {
+            scrollToTop.classList.add("show");
+        } else {
+            scrollToTop.classList.remove("show");
+        }
+    };
+
+    document.getElementById("scrollToTop").addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Hiệu ứng cuộn mượt mà
+        });
+    });
   }
     
   var ifameAction = function ()
@@ -246,14 +267,15 @@ WEBS = ( function ()
 
   return {
     _: function () {
-        scrollHeader();
-        ifameAction();
-        menuMobile();
-        slideSlick(".slide-main-list , .leader-list");
-        menuAccordion();
-        runNumber();
-        firework();
-        languageChange();
+      scrollHeader();
+      scrollTop();
+      ifameAction();
+      menuMobile();
+      slideSlick(".slide-main-list , .leader-list");
+      menuAccordion();
+      runNumber();
+      firework();
+      languageChange();
     }
   };
 })();

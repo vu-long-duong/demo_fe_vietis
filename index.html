@@ -1149,10 +1149,33 @@
             </div>
          </div>
       </footer>
+      <div class="scroll-to-top" id="scrollToTop">
+         &#8679;
+      </div>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
       <script src="./theme/frontend/js/main.js"></script>
+      <script>
+         window.onscroll = function() {
+             var scrollToTop = document.getElementById("scrollToTop");
+             var banner = document.querySelector(".banner");
+             var bannerHeight = banner.offsetHeight;
+ 
+             if (document.documentElement.scrollTop > bannerHeight) {
+                 scrollToTop.classList.add("show");
+             } else {
+                 scrollToTop.classList.remove("show");
+             }
+         };
+ 
+         document.getElementById("scrollToTop").addEventListener("click", function() {
+             window.scrollTo({
+                 top: 0,
+                 behavior: "smooth" // Hiệu ứng cuộn mượt mà
+             });
+         });
+     </script>
    </body>
    <script></script>
 </html>
