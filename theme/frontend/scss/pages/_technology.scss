@@ -148,19 +148,22 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-    .technology-list {
-        display: block;
-
-        &-item {
-            width: 100%;
-
-            .technology-list-item-main {
-                max-width: unset;
-            }
-
-            &__img {
-                max-width: unset;
+@media (max-width: 1024px) and (min-width: 768px) {
+    .technology {
+        .technology-list {
+            display: flex;
+            flex-direction: column-reverse;
+    
+            &-item {
+                width: 100%;
+    
+                .technology-list-item-main {
+                    max-width: unset;
+                }
+    
+                &__img {
+                    max-width: unset;
+                }
             }
         }
     }
@@ -170,7 +173,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .technology {
         .technology-list {
             display: flex;
