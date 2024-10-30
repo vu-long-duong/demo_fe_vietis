@@ -1,57 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotating Icon Example</title>
+    <title>Mũi Tên Quay Lại Đầu Trang</title>
     <style>
-        .service-why-list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Để có thể cuộn trang */
+            background-color: #f5f5f5;
+            margin: 0;
         }
 
-        .service-why-list-item {
+        .banner {
+            height: 300px; /* Chiều cao của banner */
+            background-color: #ccc; /* Màu nền của banner */
             text-align: center;
-            margin: 0 20px;
-            transition: transform .5s ease-in-out;
+            padding: 100px 0; /* Đệm để nội dung ở giữa */
         }
 
-        .service-why-list-item:hover .service-why-list-item__icon svg {
-            transform: rotateX(360deg);
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px; /* Khoảng cách từ đáy trang */
+            right: 20px; /* Khoảng cách từ bên phải */
+            background-color: #2F5AA8; /* Màu nền */
+            color: white; /* Màu chữ */
+            border-radius: 50%; /* Hình dạng tròn */
+            width: 50px; /* Chiều rộng */
+            height: 50px; /* Chiều cao */
+            display: flex;
+            align-items: center; /* Canh giữa theo chiều dọc */
+            justify-content: center; /* Canh giữa theo chiều ngang */
+            cursor: pointer; /* Con trỏ chuột */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+            transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+            opacity: 0; /* Ẩn mũi tên ban đầu */
+            visibility: hidden; /* Ẩn mũi tên ban đầu */
+            z-index: 1000; /* Đảm bảo mũi tên nằm trên các phần tử khác */
         }
 
-        .service-why-list-item__icon svg {
-            width: 60px;
-            height: 60px;
-            fill: #2196F3;
+        .scroll-to-top.show {
+            opacity: 1; /* Hiện mũi tên khi có class show */
+            visibility: visible; /* Hiện mũi tên khi có class show */
         }
 
-        .service-why-list-item__title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .service-why-list-item__text {
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
+        .scroll-to-top:hover {
+            background-color: #1c3d7e; /* Màu nền khi hover */
         }
     </style>
 </head>
 <body>
-    <div class="service-why-list">
-        <div class="service-why-list-item">
-            <div class="service-why-list-item__icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 7.79 14.21 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z"/>
-                </svg>
-            </div>
-            <div class="service-why-list-item__title">Certified technical staff</div>
-            <div class="service-why-list-item__text">Highly selected vendors from our rapidly expanding vendor ecosystem</div>
-        </div>
+
+    <div class="banner">
+        <h1>Banner Content</h1>
     </div>
+
+    <div class="scroll-to-top" id="scrollToTop">
+        &#8679; <!-- Mũi tên xuống -->
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            var scrollToTop = document.getElementById("scrollToTop");
+            var banner = document.querySelector(".banner");
+            var bannerHeight = banner.offsetHeight;
+
+            if (document.documentElement.scrollTop > bannerHeight) {
+                scrollToTop.classList.add("show");
+            } else {
+                scrollToTop.classList.remove("show");
+            }
+        };
+
+        document.getElementById("scrollToTop").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Hiệu ứng cuộn mượt mà
+            });
+        });
+    </script>
 </body>
 </html>
