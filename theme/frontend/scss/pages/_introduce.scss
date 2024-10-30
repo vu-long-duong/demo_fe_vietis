@@ -170,8 +170,11 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .introduce-metting {
-        position: unset;
+
+    .develop-main {
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-direction: column-reverse;
     }
 
     .outsource-group {
@@ -181,6 +184,12 @@
         &-main {
             margin: 20px 0 0;
         }
+    }
+
+    .metting-main {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 40px;
     }
 }
 
@@ -206,6 +215,7 @@
     .metting-main {
         flex-wrap: wrap;
         width: auto;
+        gap: 15px;
         padding: 15px 20px;
 
         &__title {

@@ -104,27 +104,24 @@ WEBS = ( function ()
           headerLogoNavs[i].addEventListener( "click", function ()
           {
             var parentAccItemHeader = this.parentElement;
-            
-            console.log(parentAccItemHeader)
-  
-          if (parentAccItemHeader) {
-            parentAccItemHeader.classList.toggle(
-              "header-main-content-group-nav--active"
-            );
-  
-            if (previousElement === this) {
-              return;
-            }
-  
-            if (previousElement) {
-              previousElement.parentElement.classList.remove(
+            if (parentAccItemHeader) {
+              parentAccItemHeader.classList.toggle(
                 "header-main-content-group-nav--active"
               );
+    
+              if (previousElement === this) {
+                return;
+              }
+    
+              if (previousElement) {
+                previousElement.parentElement.classList.remove(
+                  "header-main-content-group-nav--active"
+                );
+              }
+    
+              previousElement = this;
             }
-  
-            previousElement = this;
-          }
-        });
+          });
       }
   }
   

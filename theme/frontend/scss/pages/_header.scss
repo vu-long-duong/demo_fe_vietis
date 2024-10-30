@@ -281,30 +281,7 @@ header {
     }
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
-    header {
-        background-size: contain;
-
-        .header-body__title {
-            font-size: 50px;
-            width: 300px;
-        }
-
-        .header-bottom {
-            margin-top: -20px;
-        }
-    }
-
-    header .header-main-content {
-        margin-right: 0;
-    }
-
-    header .header-main-content-group-nav {
-        gap: 15px;
-    }
-}
-
-@media screen and (max-width: 767px) {
+@media (max-width: 1024px) {
 
 header {
     background-color: #2F5AA8;
@@ -379,7 +356,7 @@ header {
                                 }
                             }
         
-                            svg {
+                            img {
                                 transform: rotate(180deg);
                             }
                         }
@@ -415,7 +392,7 @@ header {
                             align-items: center;
         
                             &__icon {
-                                display: block;
+                                display: flex;
                             }
                         }
                     }
@@ -545,6 +522,4 @@ header {
       }
     }
 }
-     
-
 }
