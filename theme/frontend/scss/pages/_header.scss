@@ -311,7 +311,7 @@ header {
 
                 &-group {
                     transform: translateX(-100%);
-                    transition: all 0.5s;
+                    transition: transform 0.5s;
         
                     &__logo {
                         padding: 20px;
@@ -324,6 +324,7 @@ header {
                         margin: 0;
                         overflow-y: auto;
                         overflow-x: hidden;
+                        flex-grow: 1;
         
                         ul {
                             display: block;
@@ -398,7 +399,6 @@ header {
                     }
                     &-bottom {
                         display: flex;
-                        margin-top: auto;
                         border: 1px solid rgba(255, 255, 255, 0.2);
                 
                         &-mail {
