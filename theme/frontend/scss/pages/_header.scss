@@ -281,7 +281,7 @@ header {
     }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 768px) {
     header {
         background-size: contain;
 
@@ -294,9 +294,17 @@ header {
             margin-top: -20px;
         }
     }
+
+    header .header-main-content {
+        margin-right: 0;
+    }
+
+    header .header-main-content-group-nav {
+        gap: 15px;
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 header {
     background-color: #2F5AA8;

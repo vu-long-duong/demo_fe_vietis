@@ -84,7 +84,7 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 768px) {
     .footer-top {
         column-gap: 50px;
         row-gap: 25px;
@@ -96,7 +96,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .footer {
         padding-top: 50px;
     }
