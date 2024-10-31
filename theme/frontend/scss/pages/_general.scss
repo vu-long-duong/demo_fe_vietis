@@ -62,11 +62,16 @@
 
         &-content {
             &-list {
-                gap: 60px;
+                gap: 30px;
     
                 &-item {
                     &__number {
-                        font-size: 30px;
+                        font-size: 3rem;
+                        line-height: 3rem;
+                    }
+
+                    &__text {
+                        @include text16-regular;
                     }
                 }
             }
