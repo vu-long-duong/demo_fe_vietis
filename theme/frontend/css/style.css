@@ -393,6 +393,9 @@ header .header-main-content-group-bottom {
   header .header-main__logo {
     filter: brightness(10);
   }
+  header .header-main-content {
+    margin-right: 0;
+  }
   header .header-main-content__close {
     display: block;
     position: absolute;
@@ -638,10 +641,16 @@ header .header-main-content-group-bottom {
     background-color: #01B9EA;
   }
   .general-content-list {
-    gap: 60px;
+    gap: 30px;
   }
   .general-content-list-item__number {
-    font-size: 30px;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .general-content-list-item__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.25;
   }
 }
 .develop {
