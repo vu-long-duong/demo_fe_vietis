@@ -5,7 +5,7 @@ header {
     z-index: 2;
     width: 100%;
 
-    .header {
+    .Header {
         &-main {
             display: flex;
             justify-content: space-between;
@@ -82,7 +82,7 @@ header {
     }
 }
 
-.header-main-content-group-nav li ul {
+.Header-main-content-group-nav li ul {
     min-width: 130px;
     display: none;
     position: absolute;
@@ -93,27 +93,27 @@ header {
     box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-.header-main-content-group-nav li ul li a {
+.Header-main-content-group-nav li ul li a {
     margin: 10px;
 }
 
-.banner {
+.Banner {
     position: relative;
 }
 
-.banner-background img {
+.Banner-background img {
     width: 100%;
     height: auto;
 }
 
-.banner-line__img {
+.Banner-line__img {
     position: absolute;
     bottom: 0;
     animation: fly 3s ease-in-out infinite;
     opacity: 0;
 }
 
-.banner-modal {
+.Banner-modal {
     display: none;
     position: fixed;
     z-index: 3;
@@ -125,7 +125,7 @@ header {
     overflow: hidden;
 }
 
-.banner-modal-content {
+.Banner-modal-content {
     position: absolute;
     background-color: #fefefe;
     padding: 20px;
@@ -150,7 +150,7 @@ header {
     }
 }
 
-.banner-body {
+.Banner-body {
     position: absolute;
     top: 190px;
     margin-top: 70px;
@@ -197,7 +197,7 @@ header {
     }
 }
 
-.header--fixed {
+.Header--fixed {
     position: fixed;
     top: 0;
     color: $white-color;
@@ -206,7 +206,7 @@ header {
     width: 100%;
     z-index: 10;
   
-    .header-main {
+    .Header-main {
       padding: 20px 0;
   
       &__logo {
@@ -229,7 +229,7 @@ header {
     }
 }
 
-.header-main-content-language {
+.Header-main-content-language {
     position: relative;
     margin-left: 30px;
 
@@ -276,7 +276,7 @@ header {
 }
 
 @media (min-width: 1024px) {
-    .header-main-content-group-nav li:hover ul {
+    .Header-main-content-group-nav li:hover ul {
         display: block;
     }
 }
@@ -286,11 +286,11 @@ header {
 header {
     background-color: #2F5AA8;
 
-    &.header--fixed {
+    &.Header--fixed {
         background-color: #2F5AA8;
     }
 
-    .header {
+    .Header {
         &-main {
             padding: 20px 0;
             &__menu {
@@ -464,15 +464,15 @@ header {
     }
 }
 
-.header-main-content-group-nav--active ul {
+.Header-main-content-group-nav--active ul {
     display:block;
 }
 
-.header--fixed ul li ul li a {
+.Header--fixed ul li ul li a {
     color: $white-color;
 }
 
-.banner {
+.Banner {
     padding: 40px 0;
     position: unset;
   
@@ -506,7 +506,7 @@ header {
     &.show {
         opacity: 1;
         visibility: visible;
-      .header-main-content-group {
+      .Header-main-content-group {
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -515,7 +515,7 @@ header {
         transform: translateX(0);
       }
   
-      + .header-main-content-language {
+      + .Header-main-content-language {
         position: unset;
       }
     }

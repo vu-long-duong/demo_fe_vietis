@@ -1,4 +1,4 @@
-.client {
+.Client {
     margin: 120px 0;
 
     &__title {
@@ -35,7 +35,7 @@
                 }
             }
 
-            &:hover .client-list-item__img img{
+            &:hover .Client-list-item__img img{
                 transform: scale(1.2);
             }
 
@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .client {
+    .Client {
         margin: 60px 0;
 
         &-list {
@@ -59,7 +59,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .client {
+    .Client {
         margin: 60px 0;
 
         &-list {

@@ -1,4 +1,4 @@
-.service {
+.Service {
     background-color: #F6F6FF;
     padding-top: 195px;
 
@@ -67,7 +67,7 @@
             }
 
             &:hover {
-                .service-list-item-hover {
+                .Service-list-item-hover {
                     visibility: visible;
                 }
                 z-index: 1;
@@ -136,7 +136,7 @@
                     transition: transform 0.7s ease-in-out;
                 }
                 
-                &:hover .service-why-list-item__icon svg {
+                &:hover .Service-why-list-item__icon svg {
                     transform: rotateY(360deg);
                 }
             }
@@ -145,11 +145,11 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .service-why-list {
+    .Service-why-list {
         flex-wrap: wrap;
     }
     
-    .service-why-list-item {
+    .Service-why-list-item {
         padding: 15px;
         width: calc(50% - 24px);
         flex: none;
@@ -157,7 +157,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .service {
+    .Service {
         padding-top: 100px;
 
         &-top__text {

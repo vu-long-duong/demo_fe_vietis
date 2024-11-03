@@ -1,9 +1,9 @@
-.general__bg img {
+.General__bg img {
     width: 100%;
     object-fit: cover;
 }
 
-.general {
+.General {
     position: relative;
     margin-top: -100px;
     height: auto;
@@ -41,21 +41,21 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .general {
+    .General {
         margin-top: -20px;
     }
 
-    .general-content-list-item__number {
+    .General-content-list-item__number {
         @include text60;
     }
 
-    .general-content-list-item__text {
+    .General-content-list-item__text {
         @include text16-bold;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .general {
+    .General {
         margin-top: 0;
         background-image: none;
         background-color: $primary-color;
