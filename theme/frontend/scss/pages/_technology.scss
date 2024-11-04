@@ -1,4 +1,4 @@
-.technology-list {
+.Technology-list {
     display: flex;
     background-color: #eceff4;
 
@@ -8,156 +8,148 @@
     }
 
     &:nth-child(odd) {
-        .technology-list-item {
+        .Technology-list-item {
             &:nth-child(odd) {
                 background-color: #358BDB;
                 padding-right: 52px;
             }
 
             &:nth-child(even) {
-                .technology-list-item__img {
+                .Technology-list-item__img {
                     height: 100%;
                     margin-right: auto;
                 }
             }
 
-            .technology-list-item-main {
+            .Technology-list-item-main {
                 margin-left: auto;
             }
         }
     }
 
     &:nth-child(even) {
-        .technology-list-item {
+        .Technology-list-item {
             &:nth-child(odd) {
                 padding-left: 56px;
                 background-color: #01B9EA;
 
-                .technology-list-item-main {
+                .Technology-list-item-main {
                     margin-right: auto;
                 }
             }
 
             &:nth-child(even) {
-                .technology-list-item__img {
+                .Technology-list-item__img {
                     height: 100%;
                     margin-left: auto;
                 }
             }
         }
     }
-}
 
-.technology-list-item {
-    width: 50%;
-
-    &__img {
-        max-width: 660px;
-
-        img {
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-        }
-    }
-
-    img {
-        object-fit: cover;
-    }
-
-    .technology-list-item-main {
-        padding: 70px 0 50px;
-        max-width: 509px;
-
-        &__title {
-            color: #FFFFFF;
-            font-size: 40px;
-            font-weight: 700;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        &__text {
-            margin-top: 30px;
-            color: #FFFFFF;
-            font-weight: 400;
-            line-height: 1.25;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .technology-list-item-main-tech__title {
-            margin-top: 24px;
-            color: #FFFFFF;
-            font-weight: 700;
-            line-height: 1.25;
-        }
-
-        .technology-list-item-main-tech-list {
-            margin-top: 21px;
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            flex-wrap: wrap;
-
-            &__item {
-                width: 63px;
-                height: 48px;
-                border-radius: 8px;
-                background: #FFFFFF;
-                padding: 10px 7px;
-
-                img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: contain;
-                }
+    &-item {
+        width: 50%;
+    
+        &__img {
+            max-width: 660px;
+    
+            img {
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
             }
         }
-
-        .technology-list-item-main-support__title {
-            margin-top: 37px;
-            color: #FFFFFF;
-            font-weight: 700;
-            line-height: 1.25;
+    
+        img {
+            object-fit: cover;
         }
+    
+        &-main {
+            padding: 70px 0 50px;
+            max-width: 509px;
+    
+            &__title {
+                color: #FFFFFF;
+                font-size: 40px;
+                font-weight: 700;
+                @include text-truncate(2);
+            }
+    
+            &__text {
+                margin-top: 30px;
+                color: #FFFFFF;
+                font-weight: 400;
+                line-height: 1.25;
+                @include text-truncate(5);
+            }
+    
+            &-tech {
+                &__title {
+                    margin-top: 24px;
+                    color: #FFFFFF;
+                    font-weight: 700;
+                    line-height: 1.25;
+                }
+        
+                &-list {
+                    margin-top: 21px;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    flex-wrap: wrap;
+        
+                    &__item {
+                        width: 63px;
+                        height: 48px;
+                        border-radius: 8px;
+                        background: #FFFFFF;
+                        padding: 10px 7px;
+        
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
 
-        .technology-list-item-main-support__text {
-            display: block;
-            margin-top: 10px;
-            color: #FFFFFF;
-            font-weight: 400;
-            line-height: 1.25;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            &:hover {
-                @include underline();
-                text-underline-offset:unset
+            &-support {
+                &__title {
+                    margin-top: 37px;
+                    color: #FFFFFF;
+                    font-weight: 700;
+                    line-height: 1.25;
+                }
+        
+                &__text {
+                    display: block;
+                    margin-top: 10px;
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    line-height: 1.25;
+                    @include text-truncate();
+        
+                    &:hover {
+                        @include underline();
+                        text-underline-offset:unset
+                    }
+                }
             }
         }
     }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .technology {
-        .technology-list {
+    .Technology {
+        .Technology-list {
             display: flex;
             flex-direction: column-reverse;
     
             &-item {
                 width: 100%;
     
-                .technology-list-item-main {
+                .Technology-list-item-main {
                     max-width: unset;
                 }
     
@@ -168,38 +160,38 @@
         }
     }
 
-    .technology-list:nth-child(odd) .technology-list-item:nth-child(odd) {
+    .Technology-list:nth-child(odd) .Technology-list-item:nth-child(odd) {
         padding-left: 56px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .technology {
-        .technology-list {
+    .Technology {
+        .Technology-list {
             display: flex;
             flex-direction: column-reverse;
-        }
-    }
 
-    .technology-list-item {
-        width: 100%;
-
-        .technology-list-item-main {
-            max-width: unset;
-            padding: 30px 0 20px;
-
-            &__title {
-                @include h2;
+            &-item {
+                width: 100%;
+        
+                &-main {
+                    max-width: unset;
+                    padding: 30px 0 20px;
+        
+                    &__title {
+                        @include h2;
+                    }
+                }
+        
+                &:nth-child(odd),
+                &:nth-child(even) {
+                    padding: 0 10px;
+                }
             }
         }
-
-        &:nth-child(odd),
-        &:nth-child(even) {
-            padding: 0 10px;
-        }
     }
 
-    .technology-list:nth-child(even) .technology-list-item:nth-child(odd) {
+    .Technology-list:nth-child(even) .Technology-list-item:nth-child(odd) {
         padding: 0 52px 0 10px;
     }
 }

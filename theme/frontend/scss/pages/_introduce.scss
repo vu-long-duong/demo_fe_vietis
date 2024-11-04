@@ -1,4 +1,4 @@
-.develop {
+.Develop {
     margin-top: 90px;
     
     &-main {
@@ -35,7 +35,7 @@
     }
 }
 
-.outsource {
+.Outsource {
     &-group {
         display: flex;
         margin: 120px 0 40px;
@@ -68,15 +68,15 @@
                     
                     &--active {
     
-                        & .outsource-group-main-list-item-top__icon {
+                        & .Outsource-group-main-list-item-top__icon {
                             transform: rotate(180deg);
                         }
 
-                        & .outsource-group-main-list-item-body__text {
+                        & .Outsource-group-main-list-item-body__text {
                             max-height: 180px;
                         }
 
-                        & .outsource-group-main-list-item-top {
+                        & .Outsource-group-main-list-item-top {
                             background: $primary-color;
                         }
                     }
@@ -132,7 +132,7 @@
     }
 }
 
-.metting {
+.Metting {
     position: relative;
     transform: translateY(50%);
     
@@ -171,13 +171,13 @@
 
 @media (max-width: 1024px) and (min-width: 768px) {
 
-    .develop-main {
+    .Develop-main {
         flex-wrap: wrap;
         gap: 20px;
         flex-direction: column-reverse;
     }
 
-    .outsource-group {
+    .Outsource-group {
         margin-top: 20px;
         display: block;
 
@@ -186,7 +186,7 @@
         }
     }
 
-    .metting-main {
+    .Metting-main {
         flex-direction: column;
         gap: 20px;
         padding: 30px 40px;
@@ -195,13 +195,13 @@
 
 @media screen and (max-width: 767px) {
 
-    .develop-main {
+    .Develop-main {
         flex-wrap: wrap;
         gap: 20px;
         flex-direction: column-reverse;
     }
 
-    .outsource-group {
+    .Outsource-group {
         margin: 60px 0 0;
         display: block;
 
@@ -212,7 +212,7 @@
         }
     }
 
-    .metting-main {
+    .Metting-main {
         flex-wrap: wrap;
         width: auto;
         gap: 15px;

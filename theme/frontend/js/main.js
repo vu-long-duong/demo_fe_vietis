@@ -3,7 +3,7 @@ WEBS = ( function ()
   var menuAccordion = function () {
         var previousElement = null;
         var accItemHeaders = document.querySelectorAll(
-          ".outsource-group-main-list-item-top"
+          ".Outsource-group-main-list-item-top"
         );
     
         if (accItemHeaders.length <= 0) {
@@ -17,7 +17,7 @@ WEBS = ( function ()
     
             if (parentAccItemHeader) {
               parentAccItemHeader.classList.toggle(
-                "outsource-group-main-list-item--active"
+                "Outsource-group-main-list-item--active"
               );
     
               if (previousElement === this) {
@@ -26,7 +26,7 @@ WEBS = ( function ()
     
               if (previousElement) {
                 previousElement.parentElement.classList.remove(
-                  "outsource-group-main-list-item--active"
+                  "Outsource-group-main-list-item--active"
                 );
               }
     
@@ -38,7 +38,7 @@ WEBS = ( function ()
 
   var languageChange = function ()
   {
-    var languageLinks = document.querySelectorAll('.header-main-content-language__option');
+    var languageLinks = document.querySelectorAll('.Header-main-content-language__option');
     languageLinks.forEach(link => {
       link.addEventListener('click', handleLanguageChange);
     });
@@ -47,13 +47,13 @@ WEBS = ( function ()
     {
       event.preventDefault();
       var selectedLanguage = event.target.dataset.lang;
-      var defaultLanguageLink = document.querySelector('.header-main-content-language__option');
+      var defaultLanguageLink = document.querySelector('.Header-main-content-language__option');
       defaultLanguageLink.textContent = selectedLanguage;
     }
   }
   
   var firework = function () {
-    var lines = document.querySelectorAll(".banner-line__img");
+    var lines = document.querySelectorAll(".Banner-line__img");
 
     function setRandomPosition(line) {
       var randomX =  Math.floor(Math.random() * 100) ;
@@ -73,10 +73,10 @@ WEBS = ( function ()
   };
 
   var menuMobile = function () {
-      var btnMenu = document.querySelector('.header-main__menu');
-      var btnClose = document.querySelector('.header-main-content__close');
+      var btnMenu = document.querySelector('.Header-main__menu');
+      var btnClose = document.querySelector('.Header-main-content__close');
       var wrapper = document.querySelector('.wrapper');
-      var wrapperGroup = document.querySelector('.header-main-content-group');
+      var wrapperGroup = document.querySelector('.Header-main-content-group');
 
       btnMenu.addEventListener('click', function() {
         wrapper.classList.add('show');
@@ -93,7 +93,7 @@ WEBS = ( function ()
       } );
     
     // nav
-    var headerLogoNavs = document.querySelectorAll( '.header-main-content-group-nav-wrap' );
+    var headerLogoNavs = document.querySelectorAll( '.Header-main-content-group-nav-wrap' );
 
     var previousElement = null;
       if (headerLogoNavs.length <= 0) {
@@ -106,7 +106,7 @@ WEBS = ( function ()
             var parentAccItemHeader = this.parentElement;
             if (parentAccItemHeader) {
               parentAccItemHeader.classList.toggle(
-                "header-main-content-group-nav--active"
+                "Header-main-content-group-nav--active"
               );
     
               if (previousElement === this) {
@@ -115,7 +115,7 @@ WEBS = ( function ()
     
               if (previousElement) {
                 previousElement.parentElement.classList.remove(
-                  "header-main-content-group-nav--active"
+                  "Header-main-content-group-nav--active"
                 );
               }
     
@@ -126,7 +126,7 @@ WEBS = ( function ()
   }
   
   var runNumber = function () {
-    var counters = document.querySelectorAll('.general-content-list-item__number');
+    var counters = document.querySelectorAll('.General-content-list-item__number');
     
     counters.forEach(counter => {
       var target = +counter.getAttribute('data-target');
@@ -161,7 +161,7 @@ WEBS = ( function ()
 
     $(document).ready(function () {
         classNames.forEach(className => {
-            if (className.trim() === ".leader-list") {
+            if (className.trim() === ".Leader-list") {
               $(className).slick({
                   dots: true,
                   infinite: false,
@@ -211,7 +211,7 @@ WEBS = ( function ()
   }
 
   var scrollHeader = function () {
-      var header = document.querySelector('header');
+      var header = document.querySelector('Header');
       var headerHeight = header.offsetHeight;
       var isFixed = false;
 
@@ -220,15 +220,15 @@ WEBS = ( function ()
           var shouldBeFixed = window.scrollY > headerHeight;
           if (shouldBeFixed !== isFixed) {
               isFixed = shouldBeFixed;
-              header.classList.toggle('header--fixed', isFixed);
+              header.classList.toggle('Header--fixed', isFixed);
           }
       });
   }
 
   var scrollTop = function () {
+    var scrollToTop = document.querySelector( ".jsScrollToTop" );
     window.onscroll = function() {
-        var scrollToTop = document.getElementById("scrollToTop");
-        var banner = document.querySelector(".banner");
+        var banner = document.querySelector(".Banner");
         var bannerHeight = banner.offsetHeight;
 
         if (document.documentElement.scrollTop > bannerHeight) {
@@ -238,18 +238,18 @@ WEBS = ( function ()
         }
     };
 
-    document.getElementById("scrollToTop").addEventListener("click", function() {
+    scrollToTop.addEventListener( "click", function () {
         window.scrollTo({
             top: 0,
-            behavior: "smooth" // Hiệu ứng cuộn mượt mà
+            behavior: "smooth"
         });
     });
   }
     
   var ifameAction = function ()
   {
-    var modal = document.querySelector(".banner-modal");
-    var btn = document.querySelector( ".banner-body-view__icon" );
+    var modal = document.querySelector(".Banner-modal");
+    var btn = document.querySelector( ".Banner-body-view__icon" );
 
     btn.addEventListener("click", function(event) {
       event.preventDefault();
@@ -271,7 +271,7 @@ WEBS = ( function ()
       scrollTop();
       ifameAction();
       menuMobile();
-      slideSlick(".slide-main-list , .leader-list");
+      slideSlick(".Slide-main-list , .Leader-list");
       menuAccordion();
       runNumber();
       firework();
