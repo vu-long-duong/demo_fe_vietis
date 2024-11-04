@@ -156,6 +156,19 @@ header .Header-main-content-group-nav {
 header .Header-main-content-group-nav li {
   position: relative;
 }
+header .Header-main-content-group-nav li ul {
+  min-width: 130px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+}
+header .Header-main-content-group-nav li ul li a {
+  margin: 10px;
+}
 header .Header-main-content-group-nav a {
   display: block;
   position: relative;
@@ -184,38 +197,61 @@ header .Header-main-content-group-nav-wrap__icon {
 header .Header-main-content-group-bottom {
   display: none;
 }
-
-.Header-main-content-group-nav li ul {
-  min-width: 130px;
+header .Header-main-content-language {
+  position: relative;
+  margin-left: 30px;
+}
+header .Header-main-content-language a {
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid rgba(69, 69, 69, 0.2);
+  text-align: center;
+  display: block;
+  min-width: 40px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+header .Header-main-content-language ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.Header-main-content-group-nav li ul li a {
-  margin: 10px;
+header .Header-main-content-language ul li {
+  padding: 0;
+}
+header .Header-main-content-language ul a {
+  display: block;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid rgba(69, 69, 69, 0.2);
+  text-decoration: none;
+  background-color: #358BDB;
+}
+header .Header-main-content-language ul a:hover {
+  background-color: #01B9EA;
+}
+header .Header-main-content-language:hover ul {
+  display: block;
 }
 
 .Banner {
   position: relative;
 }
-
 .Banner-background img {
   width: 100%;
   height: auto;
 }
-
 .Banner-line__img {
   position: absolute;
   bottom: 0;
   animation: fly 3s ease-in-out infinite;
   opacity: 0;
 }
-
 .Banner-modal {
   display: none;
   position: fixed;
@@ -227,7 +263,6 @@ header .Header-main-content-group-bottom {
   background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
-
 .Banner-modal-content {
   position: absolute;
   background-color: #fefefe;
@@ -238,19 +273,6 @@ header .Header-main-content-group-bottom {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-@keyframes fly {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200%);
-    opacity: 0;
-  }
 }
 .Banner-body {
   position: absolute;
@@ -305,6 +327,18 @@ header .Header-main-content-group-bottom {
   line-height: 1.25;
 }
 
+@keyframes fly {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
 .Header--fixed {
   position: fixed;
   top: 0;
@@ -328,48 +362,6 @@ header .Header-main-content-group-bottom {
 }
 .Header--fixed ul li ul li a {
   color: #454545;
-}
-
-.Header-main-content-language {
-  position: relative;
-  margin-left: 30px;
-}
-.Header-main-content-language a {
-  border-radius: 4px;
-  padding: 8px;
-  border: 1px solid rgba(69, 69, 69, 0.2);
-  text-align: center;
-  display: block;
-  min-width: 40px;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.25;
-}
-.Header-main-content-language ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.Header-main-content-language ul li {
-  padding: 0;
-}
-.Header-main-content-language ul a {
-  display: block;
-  border-radius: 4px;
-  padding: 8px;
-  border: 1px solid rgba(69, 69, 69, 0.2);
-  text-decoration: none;
-  background-color: #358BDB;
-}
-.Header-main-content-language ul a:hover {
-  background-color: #01B9EA;
-}
-.Header-main-content-language:hover ul {
-  display: block;
 }
 
 @media (min-width: 1024px) {
@@ -1069,7 +1061,6 @@ header .Header-main-content-group-bottom {
   height: 100%;
   margin-left: auto;
 }
-
 .Technology-list-item {
   width: 50%;
 }
@@ -1084,11 +1075,11 @@ header .Header-main-content-group-bottom {
 .Technology-list-item img {
   object-fit: cover;
 }
-.Technology-list-item .Technology-list-item-main {
+.Technology-list-item-main {
   padding: 70px 0 50px;
   max-width: 509px;
 }
-.Technology-list-item .Technology-list-item-main__title {
+.Technology-list-item-main__title {
   color: #FFFFFF;
   font-size: 40px;
   font-weight: 700;
@@ -1098,7 +1089,7 @@ header .Header-main-content-group-bottom {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.Technology-list-item .Technology-list-item-main__text {
+.Technology-list-item-main__text {
   margin-top: 30px;
   color: #FFFFFF;
   font-weight: 400;
@@ -1109,38 +1100,38 @@ header .Header-main-content-group-bottom {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-tech__title {
+.Technology-list-item-main-tech__title {
   margin-top: 24px;
   color: #FFFFFF;
   font-weight: 700;
   line-height: 1.25;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-tech-list {
+.Technology-list-item-main-tech-list {
   margin-top: 21px;
   display: flex;
   gap: 8px;
   align-items: center;
   flex-wrap: wrap;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-tech-list__item {
+.Technology-list-item-main-tech-list__item {
   width: 63px;
   height: 48px;
   border-radius: 8px;
   background: #FFFFFF;
   padding: 10px 7px;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-tech-list__item img {
+.Technology-list-item-main-tech-list__item img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-support__title {
+.Technology-list-item-main-support__title {
   margin-top: 37px;
   color: #FFFFFF;
   font-weight: 700;
   line-height: 1.25;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-support__text {
+.Technology-list-item-main-support__text {
   display: block;
   margin-top: 10px;
   color: #FFFFFF;
@@ -1152,7 +1143,7 @@ header .Header-main-content-group-bottom {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.Technology-list-item .Technology-list-item-main .Technology-list-item-main-support__text:hover {
+.Technology-list-item-main-support__text:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-color: #FFF;
@@ -1182,18 +1173,18 @@ header .Header-main-content-group-bottom {
     display: flex;
     flex-direction: column-reverse;
   }
-  .Technology-list-item {
+  .Technology .Technology-list-item {
     width: 100%;
   }
-  .Technology-list-item .Technology-list-item-main {
+  .Technology .Technology-list-item-main {
     max-width: unset;
     padding: 30px 0 20px;
   }
-  .Technology-list-item .Technology-list-item-main__title {
+  .Technology .Technology-list-item-main__title {
     font-size: 20px;
     font-weight: 700;
   }
-  .Technology-list-item:nth-child(odd), .Technology-list-item:nth-child(even) {
+  .Technology .Technology-list-item:nth-child(odd), .Technology .Technology-list-item:nth-child(even) {
     padding: 0 10px;
   }
   .Technology-list:nth-child(even) .Technology-list-item:nth-child(odd) {

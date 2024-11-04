@@ -39,6 +39,21 @@ header {
         
                         li {
                             position: relative;
+
+                            ul {
+                                min-width: 130px;
+                                display: none;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                background-color: $white-color;
+                                border-radius: 4px;
+                                box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
+
+                                li a {
+                                    margin: 10px;
+                                }
+                            }
                         }
         
                         a {
@@ -77,64 +92,142 @@ header {
                         display: none;
                     }
                 }
+
+                &-language {
+                    position: relative;
+                    margin-left: 30px;
+
+                    a {
+                        border-radius: $border-radius-m;
+                        padding: 8px;
+                        border: 1px solid rgba(69, 69, 69, 0.2);
+                        text-align: center;
+                        display: block;
+                        min-width: 40px;
+                        @include text16-regular;
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        
+                        li {
+                            padding: 0;
+                        }
+
+                        a {
+                            display: block;
+                            border-radius: $border-radius-m;
+                            padding: 8px;
+                            border: 1px solid rgba(69, 69, 69, 0.2);
+                            text-decoration: none;
+                            background-color: $secondary-color;
+
+                            &:hover {
+                                background-color: $primary-color;
+                            }
+                        }
+                    }
+
+                    &:hover ul {
+                        display: block;
+                    }
+                }
             }
         }
     }
 }
 
-.Header-main-content-group-nav li ul {
-    min-width: 130px;
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: $white-color;
-    border-radius: 4px;
-    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.Header-main-content-group-nav li ul li a {
-    margin: 10px;
-}
-
 .Banner {
     position: relative;
-}
 
-.Banner-background img {
-    width: 100%;
-    height: auto;
-}
+    &-background img {
+        width: 100%;
+        height: auto;
+    }
 
-.Banner-line__img {
-    position: absolute;
-    bottom: 0;
-    animation: fly 3s ease-in-out infinite;
-    opacity: 0;
-}
+    &-line__img {
+        position: absolute;
+        bottom: 0;
+        animation: fly 3s ease-in-out infinite;
+        opacity: 0;
+    }
 
-.Banner-modal {
-    display: none;
-    position: fixed;
-    z-index: 3;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
+    &-modal {
+        display: none;
+        position: fixed;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        overflow: hidden;
 
-.Banner-modal-content {
-    position: absolute;
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 100%;
-    max-width: 700px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+        &-content {
+            position: absolute;
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 100%;
+            max-width: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-body {
+        position: absolute;
+        top: 190px;
+        margin-top: 70px;
+    
+        &__title {
+            color: $secondary-color;
+            max-width: 420px;
+            @include text60;
+            @include text-truncate(2);
+        }
+    
+        &__describe {
+            display: block;
+            color: $text-color;
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 10px;
+            max-width: 427px;
+            @include text-truncate(1);
+        }
+    
+        &-view {
+            display: inline-flex;
+            gap: 16px;
+            margin-top: 70px;
+        }
+    
+        &-inquiry {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-radius: $border-radius-xxl;
+            border: 1px solid $primary-color;
+            background: $primary-color;
+            padding: 0 50px;
+    
+            &__text {
+                color: $white-color;
+                text-align: center;
+                -webkit-text-stroke-width: 1;
+                -webkit-text-stroke-color: $primary-color;
+                @include text16-regular;
+            }
+        }
+    }
 }
 
 @keyframes fly {
@@ -147,53 +240,6 @@ header {
     100% {
         transform: translateY(-200%);
         opacity: 0;
-    }
-}
-
-.Banner-body {
-    position: absolute;
-    top: 190px;
-    margin-top: 70px;
-
-    &__title {
-        color: $secondary-color;
-        max-width: 420px;
-        @include text60;
-        @include text-truncate(2);
-    }
-
-    &__describe {
-        display: block;
-        color: $text-color;
-        font-size: 20px;
-        font-weight: 400;
-        margin-top: 10px;
-        max-width: 427px;
-        @include text-truncate(1);
-    }
-
-    &-view {
-        display: inline-flex;
-        gap: 16px;
-        margin-top: 70px;
-    }
-
-    &-inquiry {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        border-radius: $border-radius-xxl;
-        border: 1px solid $primary-color;
-        background: $primary-color;
-        padding: 0 50px;
-
-        &__text {
-            color: $white-color;
-            text-align: center;
-            -webkit-text-stroke-width: 1;
-            -webkit-text-stroke-color: $primary-color;
-            @include text16-regular;
-        }
     }
 }
 
@@ -229,52 +275,6 @@ header {
     }
 }
 
-.Header-main-content-language {
-    position: relative;
-    margin-left: 30px;
-
-    a {
-        border-radius: $border-radius-m;
-        padding: 8px;
-        border: 1px solid rgba(69, 69, 69, 0.2);
-        text-align: center;
-        display: block;
-        min-width: 40px;
-        @include text16-regular;
-    }
-
-    ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        
-        li {
-            padding: 0;
-        }
-
-        a {
-            display: block;
-            border-radius: $border-radius-m;
-            padding: 8px;
-            border: 1px solid rgba(69, 69, 69, 0.2);
-            text-decoration: none;
-            background-color: $secondary-color;
-
-            &:hover {
-                background-color: $primary-color;
-            }
-        }
-    }
-
-    &:hover ul {
-        display: block;
-    }
-}
-
 @media (min-width: 1024px) {
     .Header-main-content-group-nav li:hover ul {
         display: block;
@@ -284,10 +284,10 @@ header {
 @media (max-width: 1024px) {
 
 header {
-    background-color: #2F5AA8;
+    background-color: $primary-mobile-color;
 
     &.Header--fixed {
-        background-color: #2F5AA8;
+        background-color: $primary-mobile-color;
     }
 
     .Header {
@@ -339,7 +339,7 @@ header {
         
                         &--active {
                             ul {
-                                background-color: #2F5AA8;
+                                background-color: $primary-mobile-color;
                                 position: unset;
                                 box-shadow: none;
                                 border-radius: unset;
@@ -511,7 +511,7 @@ header {
         flex-direction: column;
         width: 80%;
         height: 100%;
-        background-color: #2F5AA8;
+        background-color: $primary-mobile-color;
         transform: translateX(0);
       }
   

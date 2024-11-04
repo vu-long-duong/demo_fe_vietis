@@ -147,12 +147,12 @@
 @media (max-width: 1024px) and (min-width: 768px) {
     .Service-why-list {
         flex-wrap: wrap;
-    }
-    
-    .Service-why-list-item {
-        padding: 15px;
-        width: calc(50% - 24px);
-        flex: none;
+        
+        &-item {
+            padding: 15px;
+            width: calc(50% - 24px);
+            flex: none;
+        }
     }
 }
 

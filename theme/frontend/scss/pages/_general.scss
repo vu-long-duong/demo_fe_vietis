@@ -43,15 +43,18 @@
 @media (max-width: 1024px) and (min-width: 768px) {
     .General {
         margin-top: -20px;
+
+        &-content-list-item {
+            &__number {
+                @include text60;
+            }
+        
+            &__text {
+                @include text16-bold;
+            }
+        }
     }
 
-    .General-content-list-item__number {
-        @include text60;
-    }
-
-    .General-content-list-item__text {
-        @include text16-bold;
-    }
 }
 
 @media screen and (max-width: 767px) {

@@ -226,8 +226,8 @@ WEBS = ( function ()
   }
 
   var scrollTop = function () {
+    var scrollToTop = document.querySelector( ".jsScrollToTop" );
     window.onscroll = function() {
-        var scrollToTop = document.getElementById("scrollToTop");
         var banner = document.querySelector(".Banner");
         var bannerHeight = banner.offsetHeight;
 
@@ -238,10 +238,10 @@ WEBS = ( function ()
         }
     };
 
-    document.getElementById("scrollToTop").addEventListener("click", function() {
+    scrollToTop.addEventListener( "click", function () {
         window.scrollTo({
             top: 0,
-            behavior: "smooth" // Hiệu ứng cuộn mượt mà
+            behavior: "smooth"
         });
     });
   }
